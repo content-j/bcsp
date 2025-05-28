@@ -1,7 +1,7 @@
-<!-- @pageTitle UI-DM-MD-00-001_메타데이터 목록 -->
-<!-- @pageCreated 2025-05-13 -->
-<!-- @pageUpdated 2025-05-13 -->
-<!-- @pageNote 서브화면 스케치 작업 -->
+<!-- @pageTitle UI-DM-DT-00-001_데이터목록 -->
+<!-- @pageCreated 2025-05-12 -->
+<!-- @pageUpdated 2025-05-19 -->
+<!-- @pageNote 정렬 타입 토글 컴포넌트 추가 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -176,7 +176,7 @@
         </div>
         <!-- //헤더 컨텐츠 영역  -->
     </header>    <!-- //header -->
-    
+
     <!-- breadcrumb -->
     <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
         <ol class="breadcrumb">
@@ -184,257 +184,253 @@
             <li><a href="#" class="txt">데이터</a></li>
         </ol>
     </nav>    <!-- breadcrumb -->
-
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">메타데이터</h2>
+            <h2 class="page-header-title">API GATEWAY 현황</h2>
         </div>
         <!-- //page-header -->
-
-        <div class="search-top-box">
-            <div class="sch-form-wrap">
-                <div class="sch-input">
-                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
-                    <button type="button" class="krds-btn medium icon ico-search">
-                        <span class="sr-only">검색</span>
-                        <i class="svg-icon ico-sch"></i>
-                    </button>
-                </div>
-        
-                <div class="sch-recent">
-                    <strong>최근검색어</strong>
-                    <div class="krds-tag-wrap large">
-                        <span class="krds-btn-tag">뉴스
-                            <button type="button" class="btn-delete">
-                                <span class="sr-only">삭제</span>
-                            </button>
-                        </span>
-                        <span class="krds-btn-tag">뉴스
-                            <button type="button" class="btn-delete">
-                                <span class="sr-only">삭제</span>
-                            </button>
-                        </span>
-        
-                    </div>
-                </div>
-            </div>
-        </div>        <!-- //search-top-box -->
-
         <div class="page-content">
-            <aside class="page-content-aside">
-                <div class="aside">
-                    <dl class="filter-dl">
-                        <dt>검색 필터</dt>
-                        <dd>
-                            <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
-                                <li class="li accordion-item active">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion active" aria-expanded="true"
-                                            id="accordionHeader-id-0xy1ka4t"
-                                            aria-controls="accordionCollapse-id-0xy1ka4t">
-                                            <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-0xy1ka4t"
-                                        aria-labelledby="accordionHeader-id-0xy1ka4t">
-                                        <div class="accordion-body">
-                                            <div class="krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-target_chk_1a">
-                                                    <label for="filter-target_chk_1a">메뉴 (2)</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-target_chk_2a" checked="">
-                                                    <label for="filter-target_chk_2a">뉴스 (2,301)</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-1dn6gd5r"
-                                            aria-controls="accordionCollapse-id-1dn6gd5r">
-                                            <div class="tit">검색 기간<span class="krds-badge bg-primary number">1 </span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-1dn6gd5r"
-                                        aria-labelledby="accordionHeader-id-1dn6gd5r">
-                                        <div class="accordion-body">
-                                            
-                                            <div class="form-group">
-                                                <div class="form-conts calendar-conts">
-                                                    <ul class="input-group range">
-                                                        <li>
-                                                            <label for="datepicker1a" class="form-tit">시작날짜</label>
-                                                            <input type="number" class="krds-input datepicker medium"
-                                                                id="datepicker1a" placeholder="" value="20231002">
-                                                        </li>
-                                                        <li class="mark sm">-</li>
-                                                        <li>
-                                                            <label for="datepicker2a" class="form-tit">종료날짜</label>
-                                                            <input type="number" class="krds-input datepicker medium"
-                                                                id="datepicker2a" placeholder="" value="20231202">
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-2xi413ug"
-                                            aria-controls="accordionCollapse-id-2xi413ug">
-                                            <div class="tit">자료 유형<span class="krds-badge bg-primary number">1</span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-2xi413ug"
-                                        aria-labelledby="accordionHeader-id-2xi413ug">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-data_chk_1a">
-                                                    <label for="filter-data_chk_1a">PDF (234)</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-data_chk_2a">
-                                                    <label for="filter-data_chk_2a">HWP (220)</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-3ty2lpxx"
-                                            aria-controls="accordionCollapse-id-3ty2lpxx">
-                                            <div class="tit">자료 이용 장소</div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-3ty2lpxx"
-                                        aria-labelledby="accordionHeader-id-3ty2lpxx">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-place_chk_1a">
-                                                    <label for="filter-place_chk_1a">장소1</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-place_chk_2a">
-                                                    <label for="filter-place_chk_2a">장소2</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-4h755vbe"
-                                            aria-controls="accordionCollapse-id-4h755vbe">
-                                            <div class="tit">자료 언어</div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-4h755vbe"
-                                        aria-labelledby="accordionHeader-id-4h755vbe">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-lang_chk_1a">
-                                                    <label for="filter-lang_chk_1a">영어</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-lang_chk_2a">
-                                                    <label for="filter-lang_chk_2a">일본어</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <div class="filter-btn">
-                        <button type="button" class="krds-btn medium tertiary">초기화</button>
-                        <button type="button" class="krds-btn medium primary">적용하기</button>
+            <div class="page-content-body">
+                <div class="date-period-section">
+                    <div class="date-period-header">
+                        <h3 class="date-period-title">조회 기간 설정</h3>
                     </div>
-                </div>
-            </aside>            <div class="page-content-body">
-                <div class="search-list-top">
-                    <div class="search-list-result">
-                        검색결과 <b class="total">249</b>건
-                    </div>
-                </div>
-                <!-- //search-list-top -->
 
-                <div class="search-list-container">
-                    <ul class="card-list w-full">
-                        <li class="card-item">
-                            <div class="card">
-                                <div class="card-thumbnail">
-                                    <div class="card-thumbnail-icon"><i><img src="../assets/images/system/icon-1.png" alt=""></i></div>
-                                    <div class="card-thumbnail-caption">해양경계</div>
+                    <div class="date-period-body">
+                        <!-- 단위 선택 -->
+                        <div class="unit-buttons">
+                            <button type="button" class="btn-unit active" data-type="day">일별</button>
+                            <button type="button" class="btn-unit" data-type="month">월별</button>
+                            <button type="button" class="btn-unit" data-type="year">년도별</button>
+                        </div>
+                        <!-- 직접 기간 지정 -->
+                        <div class="manual-range">
+                            <div class="date-range">
+                                <input type="text" class="datepicker start" placeholder="YYYY.MM.DD" aria-label="시작일" />
+                                <span class="date-range-separator">-</span>
+                                <input type="text" class="datepicker end" placeholder="YYYY.MM.DD" aria-label="종료일" />
+                            </div>
+                        </div>
+                        <div class="date-actions">
+                            <button type="button" class="btn-search krds-btn secondary"><i class="svg-icon ico-sch"></i>조회</button>
+                            <button type="button" class="btn-reset krds-btn tertiary"><i class="svg-icon ico-reset"></i>초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // date-period-section -->
+                <div class="apigate-container">
+                    <div class="apigate-grid">
+                        <div class="apigate-col apigate-col--normal">
+                            <div class="apigate-card">
+                                <div class="apigate-card__title">
+                                    <div class="icon"></div>
+                                    <strong>정상응답</strong>
+                                    <div class="value">2716</div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="card-content">
-                                        <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
-                                        <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                <div class="apigate-card__progress">
+                                    <div class="circular-progress" data-percent="90" data-color="#fff">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
                                     </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
-                                        <div class="card-info">
-                                            <dl class="info-item">
-                                                <dt>등록일</dt>
-                                                <dd>2025-05-12</dd>
-                                            </dl>
-                                            <dl class="info-item">
-                                                <dt>수정일</dt>
-                                                <dd>2025-05-12</dd>
-                                            </dl>
-                                            <dl class="info-item">
-                                                <dt>조회</dt>
-                                                <dd>128</dd>
-                                            </dl>
-                                        </div>
+                                    <span class="percent"><b>90</b><small>%</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apigate-col apigate-col--error">
+                            <div class="apigate-card">
+                                <div class="apigate-card__title">
+                                    <div class="icon"></div>
+                                    <strong>응답오류</strong>
+                                    <div class="value">2716</div>
+                                </div>
+                                <div class="apigate-card__progress">
+                                    <div class="circular-progress" data-percent="90" data-color="#fff">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                    </div>
+                                    <span class="percent"><b>90</b><small>%</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apigate-col apigate-col--summary">
+                            <div class="apigate-summary">
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">최다호출 기관</div>
+                                    <div class="label-role">해군</div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">일평균 호출횟수</div>
+                                    <div class="apigate-summary__value"><b>2.1</b><small>k</small></div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">평균 응답시간</div>
+                                    <div class="apigate-summary__value"><b>1.5</b><small>초</small></div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">평균 지연시간</div>
+                                    <div class="apigate-summary__value"><b>0.3</b><small>초</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apigate-grid">
+                        <div class="apigate-col apigate-col--chart">
+                            <div class="apigate-col__hgroup">
+                                <strong>월별 데이터 접근 이력</strong>
+                            </div>
+
+                            <div class="chart-container">
+                                영역
+                            </div>
+
+                        </div>
+                        
+                        <div class="apigate-col apigate-col--status">
+                            <div class="apigate-col__hgroup">
+                                <strong><b id="apigate-status-month">3</b>월 데이터 접근 유형 현황</strong>
+                                <div class="status-controls">
+                                    <button aria-label="이전 달" class="status-prev">
+                                        <i class="svg-icon ico-angle left"></i>
+                                    </button>
+                                    <button aria-label="다음 달"  class="status-next">
+                                        <i class="svg-icon ico-angle right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="api-gateway-status">
+                                <div class="status-item">
+                                    <div class="status-item__title">조회</div>
+                                    <div class="circular-progress" data-percent="15" data-color="#1565c0">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>15</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">등록</div>
+                                    <div class="circular-progress" data-percent="33" data-color="#fbc02d">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>33</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">수정</div>
+                                    <div class="circular-progress" data-percent="23" data-color="#388e3c">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>23</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">삭제</div>
+                                    <div class="circular-progress" data-percent="22" data-color="#d32f2f">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>22</span><span class="unit">%</span></div>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        
-                    </ul>
-                    <!-- pagination -->
-                    <div class="krds-pagination">
-                        <span class="page-navi prev disabled" href="#">이전</span>
-                        <div class="page-links">
-                            <a class="page-link" href="#">1</a>
-                            <a class="page-link" href="#">2</a>
-                            <a class="page-link" href="#">3</a>
-                            <a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
-                            <a class="page-link" href="#">5</a>
-                            <a class="page-link" href="#">6</a>
-                            <a class="page-link" href="#">7</a>
-                            <a class="page-link" href="#">8</a>
-                            <span class="page-link link-dot"></span>
-                            <a class="page-link" href="#">99</a>
                         </div>
-                        <a class="page-navi next" href="#">다음</a>
-                    </div>                    <!-- //pagination -->
+                    </div>
+
+
+                    <div class="apigate-grid">
+                        <div class="apigate-col">
+                            <div class="apigate-col__hgroup">
+                                <strong>접속 로그</strong>
+                            </div>
+                            <div class="apigate-log-list">
+                                <ul>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-1">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-2">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-1">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-2">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="apigate-col">
+                            <div class="apigate-col__hgroup">
+                                <strong>시스템 접속 건수</strong>
+                            </div>
+
+                            <div class="chart-container">
+                                영역
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <!-- //search-list-container -->
             </div>
-            <!-- // -->
+            <!-- //page-content-body -->
         </div>
         <!-- //page-content -->
     </main>
@@ -896,7 +892,130 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-     
+
+    <script>
+        
+        document.querySelectorAll('.circular-progress').forEach(function (el) {
+            var percent = el.getAttribute('data-percent');
+            var color = el.getAttribute('data-color');
+            var circle = el.querySelector('.progress');
+            var svg = el.querySelector('svg');
+            var viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+            var size = viewBox[2];
+            var radius = 50;
+            var circumference = 2 * Math.PI * radius;
+            var offset = circumference * (1 - percent / 100);
+            circle.setAttribute('stroke', color);
+            circle.setAttribute('stroke-width', '15');
+            circle.setAttribute('fill', 'none');
+            circle.setAttribute('d', "M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100");
+            circle.setAttribute('stroke-dasharray', circumference);
+            circle.setAttribute('stroke-linecap', 'round');
+            // 애니메이션 트릭
+            circle.setAttribute('stroke-dashoffset', circumference);
+            setTimeout(function () {
+                circle.setAttribute('stroke-dashoffset', offset);
+            }, 10);
+        });
+
+        // 더미 데이터
+        const DUMMY_DATA = {
+            1: { 조회: 15, 등록: 33, 수정: 23, 삭제: 22 },
+            2: { 조회: 25, 등록: 28, 수정: 30, 삭제: 17 },
+            3: { 조회: 35, 등록: 25, 수정: 20, 삭제: 20 },
+            4: { 조회: 40, 등록: 20, 수정: 25, 삭제: 15 },
+            5: { 조회: 30, 등록: 30, 수정: 25, 삭제: 15 },
+            6: { 조회: 45, 등록: 15, 수정: 20, 삭제: 20 },
+            7: { 조회: 50, 등록: 10, 수정: 25, 삭제: 15 },
+            8: { 조회: 35, 등록: 25, 수정: 20, 삭제: 20 },
+            9: { 조회: 40, 등록: 20, 수정: 25, 삭제: 15 },
+            10: { 조회: 45, 등록: 15, 수정: 25, 삭제: 15 },
+            11: { 조회: 30, 등록: 30, 수정: 20, 삭제: 20 },
+            12: { 조회: 25, 등록: 35, 수정: 25, 삭제: 15 }
+        };
+
+        // 월별 데이터 접근 유형 현황 관련 기능
+        const statusControls = {
+            currentMonth: new Date().getMonth() + 1,
+            monthElement: document.getElementById('apigate-status-month'),
+            prevButton: document.querySelector('.status-prev'),
+            nextButton: document.querySelector('.status-next'),
+            
+            init() {
+                this.updateMonthDisplay();
+                this.bindEvents();
+                this.fetchStatusData();
+            },
+
+            updateMonthDisplay() {
+                this.monthElement.textContent = this.currentMonth;
+            },
+
+            bindEvents() {
+                this.prevButton.addEventListener('click', () => {
+                    if (this.currentMonth > 1) {
+                        this.currentMonth--;
+                        this.updateMonthDisplay();
+                        this.fetchStatusData();
+                    }
+                });
+
+                this.nextButton.addEventListener('click', () => {
+                    if (this.currentMonth < 12) {
+                        this.currentMonth++;
+                        this.updateMonthDisplay();
+                        this.fetchStatusData();
+                    }
+                });
+            },
+
+            fetchStatusData() {
+                // 더미 데이터 사용
+                const data = DUMMY_DATA[this.currentMonth];
+                this.updateStatusUI(data);
+            },
+
+            updateStatusUI(data) {
+                // 각 상태 아이템 업데이트
+                const statusItems = document.querySelectorAll('.status-item');
+                statusItems.forEach(item => {
+                    const type = item.querySelector('.status-item__title').textContent;
+                    const percent = data[type] || 0;
+                    
+                    // 프로그레스바 업데이트
+                    const progress = item.querySelector('.circular-progress');
+                    progress.setAttribute('data-percent', percent);
+                    
+                    // 퍼센트 텍스트 업데이트
+                    const percentText = item.querySelector('.percent-text span:first-child');
+                    percentText.textContent = percent;
+
+                    // 이전/다음 버튼 비활성화 처리
+                    this.prevButton.disabled = this.currentMonth === 1;
+                    this.nextButton.disabled = this.currentMonth === 12;
+
+                    // 프로그레스바 애니메이션 재실행
+                    const circle = progress.querySelector('.progress');
+                    const svg = progress.querySelector('svg');
+                    const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+                    const size = viewBox[2];
+                    const radius = 50;
+                    const circumference = 2 * Math.PI * radius;
+                    const offset = circumference * (1 - percent / 100);
+                    
+                    circle.setAttribute('stroke-dashoffset', circumference);
+                    setTimeout(() => {
+                        circle.setAttribute('stroke-dashoffset', offset);
+                    }, 10);
+                });
+            }
+        };
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            statusControls.init();
+        });
+    </script>
 </body>
 
 </html>
