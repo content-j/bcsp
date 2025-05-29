@@ -1,0 +1,1022 @@
+<!-- @pageTitle API GATEWAY 이력 현황 -->
+<!-- @pageCreated 2025-05-12 -->
+<!-- @pageUpdated 2025-05-19 -->
+<!-- @pageNote 정렬 타입 토글 컴포넌트 추가 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>민군경</title>
+    <meta name="description" content="민군경" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="민군경" />
+    <meta name="keywords" content="민군경" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="민군경" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+  <script src="//cdn.jsdelivr.net/npm/krds-uiux@1.0.3/resources/cdn/krds.min.js"></script>
+  <script type="module" crossorigin src="./assets/main-BM33-rrn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CM1MyyMZ.css">
+</head>
+
+<body>
+    <!-- header -->
+    <!-- 건너뛰기 링크 -->
+    <div id="krds-skip-link">
+        <a href="#breadcrumb">본문 바로가기</a>
+    </div>
+    <!-- //건너뛰기 링크 -->
+    <header id="krds-header">
+        <div class="header-banner">
+            <div class="inner">
+                <span>민군경 블록체인 데이터 관리 시스템</span>
+            </div>
+        </div>
+        <!-- 헤더 컨텐츠 영역  -->
+        <div class="header-in">
+            <!-- 헤더 상단 기타메뉴 -->
+            <div class="header-container">
+                
+                <div class="inner">
+                    <div class="header-utility">
+                        <ul class="utility-list">
+                            <li>
+                                <!-- resize -->
+                                <div class="krds-drop-wrap krds-resize" data-adjust="scale">
+                                    <button type="button" class="krds-btn small text drop-btn">화면크기 <i
+                                            class="svg-icon ico-toggle"></i></button>
+                                    <div class="drop-menu">
+                                        <div class="drop-in">
+                                            <ul class="drop-list">
+                                                <li><button type="button" class="item-link sm"
+                                                        data-adjust-scale="sm">작게</button></li>
+                                                <li><button type="button" class="item-link md active"
+                                                        data-adjust-scale="md">보통</button></li>
+                                                <li><button type="button" class="item-link lg" data-adjust-scale="lg">조금
+                                                        크게</button></li>
+                                                <li><button type="button" class="item-link xlg"
+                                                        data-adjust-scale="xlg">크게</button></li>
+                                                <li><button type="button" class="item-link xxlg"
+                                                        data-adjust-scale="xxlg">가장크게</button></li>
+                                            </ul>
+                                            <div class="drop-bottom">
+                                                <button type="button" class="krds-btn medium text" data-adjust-scale="md"><i
+                                                        class="svg-icon ico-reset"></i> 초기화</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //resize -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-branding">
+                        <h2 class="logo">
+                            <a href="#" aria-label="홈 바로가기"><span class="sr-only">데이터 관리시스템</span></a>
+                        </h2>
+                        <div class="header-actions">
+                            <button type="button" class="btn-navi navi-row sch open-modal" title="통합검색 레이어" data-target="popTotalSchType1" tabindex="0">통합검색</button>
+    
+                            <!-- <a href="#" class="btn-navi login">로그인</a> -->
+                            <!-- <button type="button" class="btn-navi join">회원가입</button> -->
+                            <div class="krds-drop-wrap my-drop">
+                                <button type="button" class="btn-navi navi-row my drop-btn">마이페이지</button>
+                            </div>
+                            <!-- <button type="button" class="btn-navi all" aria-label="전체메뉴 열림"
+                                aria-controls="mobile-nav">전체메뉴</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //헤더 상단 기타메뉴 -->
+    
+            <!-- 메인메뉴 : 데스크탑 -->
+            <nav class="krds-main-menu">
+                <div class="inner">
+                    <ul class="gnb-menu">
+                        <li>
+                            <a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">메타데이터</a>
+                        </li>
+                        <li>
+                            <a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">데이터</a>
+                        </li>
+                        <li>
+                            <a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">운영 표준</a>
+                        </li>
+                        <li>
+                            <a href="#" class="gnb-main-trigger is-link" data-trigger="gnb">Open API</a>
+                        </li>
+    
+                        <li>
+                            <button type="button" class="gnb-main-trigger" data-trigger="gnb">시스템관리</button>
+                            <!-- gnb-toggle-wrap -->
+                            <div class="gnb-toggle-wrap">
+                                <!-- gnb-main-list -->
+                                <div class="gnb-main-list" data-has-submenu="true">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">데이터 관리</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">공통 코드 관리</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">기관 및 부서 관리</a>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb-sub-trigger" data-trigger="gnb">연계 관리</button>
+                                            <!-- gnb-sub-list -->
+                                            <div class="gnb-sub-list between">
+                                                <div class="gnb-sub-content">
+                                                    <h2 class="sub-title">
+                                                        연계 관리
+                                                        <!-- <a href="#" class="krds-btn link basic small">
+                                                            <span class="underline">바로가기</span>
+                                                            <i class="svg-icon ico-angle right"></i>
+                                                        </a> -->
+                                                    </h2>
+                                                    <ul>
+                                                        <li><a href="#">연계 모니터링(원천) 목록</a></li>
+                                                        <li><a href="#">연계 모니터링(가공) 목록</a></li>
+                                                        <li><a href="#">연계 모니터링(가공) 실행 목록</a></li>
+                                                        <li><a href="#">가공 작업 설정 목록</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- //gnb-sub-list -->
+                                        </li>
+                                        <li>
+                                            <a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">API GATEWAY
+                                                현황</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="gnb-sub-trigger is-link" data-trigger="gnb">API 서비스 관리</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#" class="gnb-sub-trigger is-link external-link" data-trigger="gnb" target="_blank" title="새 창 열림">2Depth</a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                                <!-- //gnb-main-list -->
+                            </div>
+                            <!-- //gnb-toggle-wrap -->
+                        </li>
+    
+    
+                    </ul>
+                </div>
+            </nav>
+            <!-- //메인메뉴 : 데스크탑 -->
+        </div>
+        <!-- //헤더 컨텐츠 영역  -->
+    </header>    <!-- //header -->
+
+    <!-- breadcrumb -->
+    <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="home"><a href="#" class="txt">홈</a></li>
+            <li><a href="#" class="txt">데이터</a></li>
+        </ol>
+    </nav>    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">API GATEWAY 현황</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <div class="date-period-section">
+                    <div class="date-period-header">
+                        <h3 class="date-period-title">조회 기간 설정</h3>
+                    </div>
+
+                    <div class="date-period-body">
+                        <!-- 단위 선택 -->
+                        <div class="unit-buttons">
+                            <button type="button" class="btn-unit active" data-type="day">일별</button>
+                            <button type="button" class="btn-unit" data-type="month">월별</button>
+                            <button type="button" class="btn-unit" data-type="year">년도별</button>
+                        </div>
+                        <!-- 직접 기간 지정 -->
+                        <div class="manual-range">
+                            <div class="date-range">
+                                <input type="text" class="datepicker start" placeholder="YYYY.MM.DD" aria-label="시작일" />
+                                <span class="date-range-separator">-</span>
+                                <input type="text" class="datepicker end" placeholder="YYYY.MM.DD" aria-label="종료일" />
+                            </div>
+                        </div>
+                        <div class="date-actions">
+                            <button type="button" class="btn-search krds-btn secondary"><i class="svg-icon ico-sch"></i>조회</button>
+                            <button type="button" class="btn-reset krds-btn tertiary"><i class="svg-icon ico-reset"></i>초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // date-period-section -->
+                <div class="apigate-container">
+                    <div class="apigate-grid">
+                        <div class="apigate-col apigate-col--normal">
+                            <div class="apigate-card">
+                                <div class="apigate-card__title">
+                                    <div class="icon"></div>
+                                    <strong>정상응답</strong>
+                                    <div class="value">2716</div>
+                                </div>
+                                <div class="apigate-card__progress">
+                                    <div class="circular-progress" data-percent="90" data-color="#fff">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                    </div>
+                                    <span class="percent"><b>90</b><small>%</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apigate-col apigate-col--error">
+                            <div class="apigate-card">
+                                <div class="apigate-card__title">
+                                    <div class="icon"></div>
+                                    <strong>응답오류</strong>
+                                    <div class="value">2716</div>
+                                </div>
+                                <div class="apigate-card__progress">
+                                    <div class="circular-progress" data-percent="90" data-color="#fff">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                    </div>
+                                    <span class="percent"><b>90</b><small>%</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apigate-col apigate-col--summary">
+                            <div class="apigate-summary">
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">최다호출 기관</div>
+                                    <div class="label-role">해군</div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">일평균 호출횟수</div>
+                                    <div class="apigate-summary__value"><b>2.1</b><small>k</small></div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">평균 응답시간</div>
+                                    <div class="apigate-summary__value"><b>1.5</b><small>초</small></div>
+                                </div>
+                                <div class="apigate-summary__item">
+                                    <div class="apigate-summary__label">평균 지연시간</div>
+                                    <div class="apigate-summary__value"><b>0.3</b><small>초</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apigate-grid">
+                        <div class="apigate-col apigate-col--chart">
+                            <div class="apigate-col__hgroup">
+                                <strong>월별 데이터 접근 이력</strong>
+                            </div>
+
+                            <div class="chart-container">
+                                영역
+                            </div>
+
+                        </div>
+                        
+                        <div class="apigate-col apigate-col--status">
+                            <div class="apigate-col__hgroup">
+                                <strong><b id="apigate-status-month">3</b>월 데이터 접근 유형 현황</strong>
+                                <div class="status-controls">
+                                    <button aria-label="이전 달" class="status-prev">
+                                        <i class="svg-icon ico-angle left"></i>
+                                    </button>
+                                    <button aria-label="다음 달"  class="status-next">
+                                        <i class="svg-icon ico-angle right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="api-gateway-status">
+                                <div class="status-item">
+                                    <div class="status-item__title">조회</div>
+                                    <div class="circular-progress" data-percent="15" data-color="#1565c0">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>15</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">등록</div>
+                                    <div class="circular-progress" data-percent="33" data-color="#fbc02d">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>33</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">수정</div>
+                                    <div class="circular-progress" data-percent="23" data-color="#388e3c">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>23</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-item__title">삭제</div>
+                                    <div class="circular-progress" data-percent="22" data-color="#d32f2f">
+                                        <svg viewBox="0 0 120 120">
+                                            <path class="bg" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                            <path class="progress" d="M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100" />
+                                        </svg>
+                                        <div class="percent-text"><span>22</span><span class="unit">%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="apigate-grid">
+                        <div class="apigate-col">
+                            <div class="apigate-col__hgroup">
+                                <strong>접속 로그</strong>
+                            </div>
+                            <div class="apigate-log-list">
+                                <ul>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-1">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-2">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-1">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-2">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                    <li class="apigate-log-item">
+                                        <div class="log-url theme-3">/mof-portal.do</div>
+                                        <div class="log-info">
+                                            <div class="log-user">활용시스템(민)</div>
+                                            <div class="log-date"><span>2025-05-23 10:00:00</span> <i class="icon-log-date" aria-hidden="true"></i></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="apigate-col">
+                            <div class="apigate-col__hgroup">
+                                <strong>시스템 접속 건수</strong>
+                            </div>
+
+                            <div class="chart-container">
+                                영역
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    <footer id="krds-footer">
+        <div class="foot-quick">
+            <div class="inner">
+                <button type="button" class="link" title="related_site 레이어">관련 사이트 1</button>
+                <button type="button" class="link" title="related_site 레이어">관련 사이트 2</button>
+                <button type="button" class="link" title="related_site 레이어">관련 사이트 3</button>
+                <button type="button" class="link" title="related_site 레이어">관련 사이트 4</button>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="f-logo">
+                <span class="sr-only">KRDS - Korea Design System</span>
+            </div>
+            <div class="f-cnt">
+                <div class="f-info">
+                    <p class="info-addr">(26464) 서울특별시 마곡대로 데이터센터</p>
+                    <ul class="info-cs">
+                        <li><strong class="strong">시스템 관련문의</strong><span class="span"><a href="mailto:mkmaster@mkis.or.kr">mkmaster@mkis.or.kr</a></span></li>
+                        <li><strong class="strong">대표전화 0000-0000</strong><span class="span">(유료, 평일 09시~18시)</span></li>
+                    </ul>
+                </div>
+    
+                <!-- <div class="f-link">
+                    <div class="link-go">
+                        <a href="#" class="krds-btn medium text">찾아오시는 길 <i class="svg-icon ico-angle right"></i></a>
+                    </div>
+                </div> -->
+            </div>
+    
+            <div class="f-btm">
+                <div class="f-btm-text">
+                    <div class="f-menu">
+                        <a href="#">이용안내</a>
+                        <a href="#" class="point"><b>개인정보처리방침</b></a>
+                        <a href="#">저작권 정책</a>
+                    </div>
+                    <p class="f-copy">© 2025 All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    <div class="modal-wrap">
+        <!-- 모달 : 통합 검색 -->
+        <div id="popTotalSch" class="krds-modal fade" data-type="full" aria-labelledby="tit_total_sch" role="dialog">
+          <!-- modal-dialog -->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal title -->
+              <div class="modal-header sr-only">
+                <h2 id="tit_total_sch" class="modal-title">통합검색</h2>
+              </div>
+              <!-- //modal title -->
+              <!-- modal contents -->
+              <div class="modal-conts" tabindex="0">
+                <!-- 통합검색 -->
+                <div class="pop-total-serch-wrap">
+                  <!-- 통합검색 정보입력 영역 -->
+                  <div class="search-total-top">
+                    <!-- 검색어 타이틀 -->
+                    <div class="search-tit">
+                      <label for="search-total-input-id">검색어를 입력해주세요</label>
+                      <a href="#" class="krds-btn medium text">검색에 어려움이 있으신가요? <i class="svg-icon ico-login-go"></i></a>
+                    </div>
+                    <!-- //검색어 타이틀 -->
+    
+                    <!-- 검색어 입력 폼 -->
+                    <div class="sch-form-wrap vert">
+                      <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" id="search-total-input-id" placeholder="검색어를 입력해주세요.">
+                        <button type="button" class="krds-btn icon xlarge ico-search">
+                          <span class="sr-only">검색</span>
+                          <i class="svg-icon ico-sch"></i>
+                        </button>
+                      </div>
+                      <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
+                    </div>
+                    <!-- //검색어 입력 폼 -->
+                  </div>
+                  <!-- //통합검색 정보입력 영역 -->
+    
+                  <!-- 검색어 리스트 -->
+                  <div class="search-text">
+                    <!-- 검색어 입력 전 -->
+                    <ul class="sch-info-list">
+                      <li class="sch-info-item word-popular">
+                        <h3 class="tit">인기검색어</h3>
+                        <ol class="list">
+                          <li>
+                            <span class="ranking-txt">안전보건교육</span>
+                            <span class="ranking-state up"><em class="sr-only">상승</em>1</span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">산업재해조사표</span>
+                            <span class="ranking-state same"><em class="sr-only">동일</em></span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">퇴직금계산기</span>
+                            <span class="ranking-state up"><em class="sr-only">상승</em>3</span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">육아휴직급여</span>
+                            <span class="ranking-state same"><em class="sr-only">동일</em></span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">실업인정신청</span>
+                            <span class="ranking-state same"><em class="sr-only">동일</em></span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">국민내일배움</span>
+                            <span class="ranking-state down"><em class="sr-only">하락</em>1</span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">노사협의회</span>
+                            <span class="ranking-state down"><em class="sr-only">하락</em>1</span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">산업안전보건</span>
+                            <span class="ranking-state same"><em class="sr-only">동일</em></span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">국민내일배움카드신청</span>
+                            <span class="ranking-state up"><em class="sr-only">상승</em>11</span>
+                          </li>
+                          <li>
+                            <span class="ranking-txt">안전보건교육</span>
+                            <span class="ranking-state same"><em class="sr-only">동일</em></span>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="sch-info-item word-lately">
+                        <h3 class="tit">최근검색어</h3>
+                        <ul class="list" aria-live="polite">
+                          <li>
+                            <span class="word-txt">안전보건교육</span>
+                            <button type="button" class="krds-btn small icon">
+                              <span class="sr-only">삭제</span>
+                              <i class="svg-icon ico-delete-fill"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <span class="word-txt">안전보건교육</span>
+                            <button type="button" class="krds-btn small icon">
+                              <span class="sr-only">삭제</span>
+                              <i class="svg-icon ico-delete-fill"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <span class="word-txt">안전보건교육</span>
+                            <button type="button" class="krds-btn small icon">
+                              <span class="sr-only">삭제</span>
+                              <i class="svg-icon ico-delete-fill"></i>
+                            </button>
+                          </li>
+                        </ul>
+                        <button type="button" class="krds-btn medium text">최근검색어 전체 삭제 <i class="svg-icon ico-delete-fill"></i></button>
+                      </li>
+                    </ul>
+                    <!-- //검색어 입력 전 -->
+                  </div>
+                  <!-- //검색어 리스트 -->
+                </div>
+                <!-- //통합검색 -->
+              </div>
+              <!-- //modal contents -->
+              <!-- close button -->
+              <button type="button" class="krds-btn xlarge icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+              </button>
+              <!-- //close button -->
+            </div>
+          </div>
+          <!-- //modal-dialog -->
+          <div class="modal-back in"></div>
+        </div>
+        <!-- //모달 : 통합 검색 -->
+    
+        <!-- 모달 : 통합 검색 type1-->
+        <div id="popTotalSchType1" class="krds-modal fade" data-type="full" aria-labelledby="tit_total_sch_type1">
+          <!-- modal-dialog -->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal title -->
+              <div class="modal-header sr-only">
+                <h2 id="tit_total_sch_type1" class="modal-title">통합검색</h2>
+              </div>
+              <!-- //modal title -->
+              <!-- modal contents -->
+              <div class="modal-conts">
+                <!-- 통합검색 -->
+                <div class="pop-total-serch-wrap">
+                  <!-- 통합검색 정보입력 영역 -->
+                  <div class="search-total-top">
+                    <!-- 검색어 타이틀 -->
+                    <div class="search-tit">
+                      <label for="search-total-input-id-type1">검색어를 입력해주세요</label>
+                      <a href="#" class="krds-btn medium text">검색에 어려움이 있으신가요? <i class="svg-icon ico-login-go"></i></a>
+                    </div>
+                    <!-- //검색어 타이틀 -->
+    
+                    <!-- 검색어 입력 폼 -->
+                    <div class="sch-form-wrap vert">
+                      <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" id="search-total-input-id-type1" placeholder="검색어 입력" value="퇴직">
+                        <button type="button" class="krds-btn icon xlarge ico-search">
+                          <span class="sr-only">검색</span>
+                          <i class="svg-icon ico-sch"></i>
+                        </button>
+                      </div>
+                      <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
+                    </div>
+                    <!-- //검색어 입력 폼 -->
+                  </div>
+                  <!-- //통합검색 정보입력 영역 -->
+    
+                  <!-- 검색어 리스트 -->
+                  <div class="search-text">
+                    <!-- 검색어 입력 후 -->
+                    <ul class="sch-keyword-list" aria-live="polite">
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt">나의<span class="text-bold">퇴직</span>금 계산해 보기</p>
+                          <a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" class="krds-btn medium link" title="새창 열림" target="_blank">
+                            <span class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span>
+                            <i class="svg-icon ico-go"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt"><span class="text-bold">퇴직</span>금 계산기</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt"><span class="text-bold">퇴직</span>금 중간정산</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt"><span class="text-bold">퇴직</span>금 미지급</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt">일용직<span class="text-bold">퇴직</span>금</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt">육아휴직<span class="text-bold">퇴직</span>금</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="word-txt">
+                          <p class="txt">연차수당<span class="text-bold">퇴직</span>금</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- //검색어 입력 후 -->
+                  </div>
+                  <!-- //검색어 리스트 -->
+                </div>
+                <!-- //통합검색 -->
+              </div>
+              <!-- //modal contents -->
+              <!-- close button -->
+              <button type="button" class="krds-btn xlarge icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+              </button>
+              <!-- //close button -->
+            </div>
+          </div>
+          <!-- //modal-dialog -->
+          <div class="modal-back"></div>
+        </div>
+    
+        <!-- //모달 : 통합 검색 type1-->
+    
+        <!-- 모달 : 소속기관 링크 -->
+        <section id="popFootLink" class="krds-modal fade" data-type="full" aria-labelledby="tit_foot_link">
+          <!-- modal-dialog -->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal title -->
+              <div class="modal-header">
+                <h2 id="tit_foot_link" class="modal-title">소속기관(지청 및 위원회)</h2>
+              </div>
+              <!-- //modal title -->
+              <!-- modal contents -->
+              <div class="modal-conts">
+                <!-- 관련기관 링크 -->
+                <ul class="pop-foot-links">
+                  <li><a href="#" target="_blank">서울지방고용노동청</a></li>
+                  <li><a href="#" target="_blank">서울강남지청</a></li>
+                  <li><a href="#" target="_blank">서울동부지청</a></li>
+                  <li><a href="#" target="_blank">서울서부지청</a></li>
+                  <li><a href="#" target="_blank">서울남부지청</a></li>
+                  <li><a href="#" target="_blank">서울북부지청</a></li>
+                  <li><a href="#" target="_blank">서울관악지청</a></li>
+                  <li><a href="#" target="_blank">중부지방고용노동청</a></li>
+                  <li><a href="#" target="_blank">인천북부지청</a></li>
+                  <li><a href="#" target="_blank">부천지청</a></li>
+                  <li><a href="#" target="_blank">의정부지청</a></li>
+                  <li><a href="#" target="_blank">고양지청</a></li>
+                  <li><a href="#" target="_blank">경기지청</a></li>
+                  <li><a href="#" target="_blank">성남지청</a></li>
+                  <li><a href="#" target="_blank">안양지청</a></li>
+                  <li><a href="#" target="_blank">안산지청</a></li>
+                  <li><a href="#" target="_blank">평택지청</a></li>
+                  <li><a href="#" target="_blank">강원지청･강릉지청</a></li>
+                  <li><a href="#" target="_blank">원주지청</a></li>
+                  <li><a href="#" target="_blank">태백지청</a></li>
+                  <li><a href="#" target="_blank">영월출장소</a></li>
+                  <li><a href="#" target="_blank">부산지방고용노동청 </a></li>
+                  <li><a href="#" target="_blank">부산동부지청</a></li>
+                  <li><a href="#" target="_blank">부산북부지청</a></li>
+                  <li><a href="#" target="_blank">창원지청</a></li>
+                  <li><a href="#" target="_blank">울산지청</a></li>
+                  <li><a href="#" target="_blank">양산지청</a></li>
+                  <li><a href="#" target="_blank">진주지청</a></li>
+                  <li><a href="#" target="_blank">통영지청</a></li>
+                  <li><a href="#" target="_blank">대구지방고용노동청</a></li>
+                  <li><a href="#" target="_blank">대구서부지청</a></li>
+                  <li><a href="#" target="_blank">포항지청</a></li>
+                  <li><a href="#" target="_blank">구미지청</a></li>
+                  <li><a href="#" target="_blank">영주지청</a></li>
+                  <li><a href="#" target="_blank">안동지청</a></li>
+                  <li><a href="#" target="_blank">광주지방고용노동청</a></li>
+                  <li><a href="#" target="_blank">전주지청</a></li>
+                  <li><a href="#" target="_blank">전주지청익산지청</a></li>
+                  <li><a href="#" target="_blank">군산지청</a></li>
+                  <li><a href="#" target="_blank">목포지청</a></li>
+                  <li><a href="#" target="_blank">여수지청</a></li>
+                  <li><a href="#" target="_blank">대전지방고용노동청</a></li>
+                  <li><a href="#" target="_blank">청주지청</a></li>
+                  <li><a href="#" target="_blank">천안지청</a></li>
+                  <li><a href="#" target="_blank">충주지청</a></li>
+                  <li><a href="#" target="_blank">보령지청</a></li>
+                  <li><a href="#" target="_blank">서산출장소</a></li>
+                  <li><a href="#" target="_blank">중앙노동위원회</a></li>
+                  <li><a href="#" target="_blank">최저임금위원회</a></li>
+                  <li><a href="#" target="_blank">산업재해보상보험재심사위원회</a></li>
+                  <li><a href="#" target="_blank">고용보험심사위원회</a></li>
+                </ul>
+                <!-- //관련기관 링크 -->
+              </div>
+              <!-- //modal contents -->
+              <!-- close button -->
+              <button type="button" class="krds-btn xlarge icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+              </button>
+              <!-- //close button -->
+            </div>
+          </div>
+          <!-- //modal-dialog -->
+          <div class="modal-back"></div>
+        </section>
+    
+        <!-- //모달 : 소속기관 링크 -->
+    
+        <!-- modal 글자 / 화면 설정 -->
+        <section id="modal_adjust_display" class="krds-modal fade" aria-labelledby="tit_modal_adjust_display">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal title -->
+              <div class="modal-header">
+                <h2 id="tit_modal_adjust_display" class="modal-title">글자·화면 표시 설정</h2>
+              </div>
+              <!-- //modal title -->
+              <!-- modal contents -->
+              <div class="modal-conts">
+                <div class="conts-area">
+                  <!-- adjust_display -->
+                  <div class="adjust_display">
+                    <!-- 글자 / 화면 표시 설정 -->
+                    <div class="fieldset adjust_scale">
+                      <div class="form-group scale-options">
+                        <h3>글자·화면 표시 설정</h3>
+                        <div class="form-conts">
+                          <div class="krds-check-area chk-column">
+                            <div class="krds-form-check">
+                              <input type="radio" name="scale_level" id="scale_level_small" value="small">
+                              <label for="scale_level_small">작게</label>
+                            </div>
+                            <div class="krds-form-check">
+                              <input type="radio" name="scale_level" id="scale_level_medium" value="medium" checked="">
+                              <label for="scale_level_medium">보통</label>
+                            </div>
+                            <div class="krds-form-check">
+                              <input type="radio" name="scale_level" id="scale_level_large" value="large">
+                              <label for="scale_level_large">조금 크게</label>
+                            </div>
+                            <div class="krds-form-check">
+                              <input type="radio" name="scale_level" id="scale_level_xlarge" value="xlarge">
+                              <label for="scale_level_xlarge">크게</label>
+                            </div>
+                            <div class="krds-form-check">
+                              <input type="radio" name="scale_level" id="scale_level_xxlarge" value="xxlarge">
+                              <label for="scale_level_xxlarge">가장 크게</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 화면 표시 모드 -->
+                    <div class="fieldset">
+                      <div class="form-group view-mode-options">
+                        <h3>화면 표시 모드</h3>
+                        <div class="form-conts">
+                          <div class="krds-check-area chk-column">
+                            <div class="krds-form-check view-mode-light">
+                              <input type="radio" name="view_mode" id="view_mode_light" value="light" checked="">
+                              <label for="view_mode_light">기본 (밝은 배경)</label>
+                            </div>
+                            <div class="krds-form-check view-mode-dark">
+                              <input type="radio" name="view_mode" id="view_mode_dark" value="high-contrast">
+                              <label for="view_mode_dark">선명하게 (어두운 배경)</label>
+                            </div>
+                            <div class="krds-form-check view-mode-default">
+                              <input type="radio" name="view_mode" id="view_mode_default" value="theme">
+                              <label for="view_mode_default">시스템 설정</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //adjust_display -->
+                </div>
+              </div>
+              <!-- //modal contents -->
+              <!-- modal btn -->
+              <div class="modal-btn btn-wrap">
+                <button type="button" class="krds-btn medium tertiary close-modal" id="reset_display">초기화</button>
+                <button type="button" class="krds-btn medium primary close-modal">닫기</button>
+              </div>
+              <!-- //modal btn -->
+              <!-- close button -->
+              <button type="button" class="krds-btn medium icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+              </button>
+              <!-- //close button -->
+            </div>
+          </div>
+          <div class="modal-back" style="background-color: transparent;"></div>
+        </section>
+    
+        <!-- //modal 글자 / 화면 설정 -->
+      </div>    <!-- //통합검색 상세 조건 -->
+
+    <script>
+        
+        document.querySelectorAll('.circular-progress').forEach(function (el) {
+            var percent = el.getAttribute('data-percent');
+            var color = el.getAttribute('data-color');
+            var circle = el.querySelector('.progress');
+            var svg = el.querySelector('svg');
+            var viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+            var size = viewBox[2];
+            var radius = 50;
+            var circumference = 2 * Math.PI * radius;
+            var offset = circumference * (1 - percent / 100);
+            circle.setAttribute('stroke', color);
+            circle.setAttribute('stroke-width', '15');
+            circle.setAttribute('fill', 'none');
+            circle.setAttribute('d', "M60 10 a 50 50 0 0 1 0 100 a 50 50 0 0 1 0 -100");
+            circle.setAttribute('stroke-dasharray', circumference);
+            circle.setAttribute('stroke-linecap', 'round');
+            
+            // 애니메이션 트릭
+            circle.setAttribute('stroke-dashoffset', circumference);
+            setTimeout(function () {
+                circle.setAttribute('stroke-dashoffset', offset);
+            }, 10);
+        });
+
+        // 더미 데이터
+        const DUMMY_DATA = {
+            1: { 조회: 15, 등록: 33, 수정: 23, 삭제: 22 },
+            2: { 조회: 25, 등록: 28, 수정: 30, 삭제: 17 },
+            3: { 조회: 35, 등록: 25, 수정: 20, 삭제: 20 },
+            4: { 조회: 40, 등록: 20, 수정: 25, 삭제: 15 },
+            5: { 조회: 30, 등록: 30, 수정: 25, 삭제: 15 },
+            6: { 조회: 45, 등록: 15, 수정: 20, 삭제: 20 },
+            7: { 조회: 50, 등록: 10, 수정: 25, 삭제: 15 },
+            8: { 조회: 35, 등록: 25, 수정: 20, 삭제: 20 },
+            9: { 조회: 40, 등록: 20, 수정: 25, 삭제: 15 },
+            10: { 조회: 45, 등록: 15, 수정: 25, 삭제: 15 },
+            11: { 조회: 30, 등록: 30, 수정: 20, 삭제: 20 },
+            12: { 조회: 25, 등록: 35, 수정: 25, 삭제: 15 }
+        };
+
+        // 월별 데이터 접근 유형 현황 관련 기능
+        const statusControls = {
+            currentMonth: new Date().getMonth() + 1,
+            monthElement: document.getElementById('apigate-status-month'),
+            prevButton: document.querySelector('.status-prev'),
+            nextButton: document.querySelector('.status-next'),
+            
+            init() {
+                this.updateMonthDisplay();
+                this.bindEvents();
+                this.fetchStatusData();
+            },
+
+            updateMonthDisplay() {
+                this.monthElement.textContent = this.currentMonth;
+            },
+
+            bindEvents() {
+                this.prevButton.addEventListener('click', () => {
+                    if (this.currentMonth > 1) {
+                        this.currentMonth--;
+                        this.updateMonthDisplay();
+                        this.fetchStatusData();
+                    }
+                });
+
+                this.nextButton.addEventListener('click', () => {
+                    if (this.currentMonth < 12) {
+                        this.currentMonth++;
+                        this.updateMonthDisplay();
+                        this.fetchStatusData();
+                    }
+                });
+            },
+
+            fetchStatusData() {
+                // 더미 데이터 사용
+                const data = DUMMY_DATA[this.currentMonth];
+                this.updateStatusUI(data);
+            },
+
+            updateStatusUI(data) {
+                // 각 상태 아이템 업데이트
+                const statusItems = document.querySelectorAll('.status-item');
+                statusItems.forEach(item => {
+                    const type = item.querySelector('.status-item__title').textContent;
+                    const percent = data[type] || 0;
+                    
+                    // 프로그레스바 업데이트
+                    const progress = item.querySelector('.circular-progress');
+                    progress.setAttribute('data-percent', percent);
+                    
+                    // 퍼센트 텍스트 업데이트
+                    const percentText = item.querySelector('.percent-text span:first-child');
+                    percentText.textContent = percent;
+
+                    // 이전/다음 버튼 비활성화 처리
+                    this.prevButton.disabled = this.currentMonth === 1;
+                    this.nextButton.disabled = this.currentMonth === 12;
+
+                    // 프로그레스바 애니메이션 재실행
+                    const circle = progress.querySelector('.progress');
+                    const svg = progress.querySelector('svg');
+                    const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+                    const size = viewBox[2];
+                    const radius = 50;
+                    const circumference = 2 * Math.PI * radius;
+                    const offset = circumference * (1 - percent / 100);
+                    
+                    circle.setAttribute('stroke-dashoffset', circumference);
+                    setTimeout(() => {
+                        circle.setAttribute('stroke-dashoffset', offset);
+                    }, 10);
+                });
+            }
+        };
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            statusControls.init();
+        });
+    </script>
+</body>
+
+</html>

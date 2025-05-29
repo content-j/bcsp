@@ -1,7 +1,7 @@
-<!-- @pageTitle UI-DM-MA-00-002_통합검색결과 -->
-<!-- @pageCreated 2025-05-12 -->
-<!-- @pageUpdated 2025-05-12 -->
-<!-- @pageNote 통합검색 -->
+<!-- @pageTitle UI-DM-MD-00-001_메타데이터 목록 -->
+<!-- @pageCreated 2025-05-13 -->
+<!-- @pageUpdated 2025-05-13 -->
+<!-- @pageNote 서브화면 스케치 작업 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -21,8 +21,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <script src="//cdn.jsdelivr.net/npm/krds-uiux@1.0.3/resources/cdn/krds.min.js"></script>
-  <script type="module" crossorigin src="../assets/main-Dfv3lSjr.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/main-BRGOU7P7.css">
+  <script type="module" crossorigin src="./assets/main-BM33-rrn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CM1MyyMZ.css">
 </head>
 
 <body>
@@ -176,7 +176,7 @@
         </div>
         <!-- //헤더 컨텐츠 영역  -->
     </header>    <!-- //header -->
-
+    
     <!-- breadcrumb -->
     <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
         <ol class="breadcrumb">
@@ -187,10 +187,10 @@
 
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">통합검색결과</h2>
+            <h2 class="page-header-title">메타데이터</h2>
         </div>
         <!-- //page-header -->
-        
+
         <div class="search-top-box">
             <div class="sch-form-wrap">
                 <div class="sch-input">
@@ -221,158 +221,157 @@
         </div>        <!-- //search-top-box -->
 
         <div class="page-content">
-            <!-- <aside class="page-content-aside">
-    <div class="aside">
-        <dl class="filter-dl">
-            <dt>검색 필터</dt>
-            <dd>
-                <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
-                    <li class="li accordion-item active">
-                        <h3 class="accordion-header">
-                            <button type="button" class="btn-accordion active" aria-expanded="true"
-                                id="accordionHeader-id-0xy1ka4t"
-                                aria-controls="accordionCollapse-id-0xy1ka4t">
-                                <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span>
-                                </div>
-                            </button>
-                        </h3>
-                        <div class="accordion-collapse collapse" role="region"
-                            id="accordionCollapse-id-0xy1ka4t"
-                            aria-labelledby="accordionHeader-id-0xy1ka4t">
-                            <div class="accordion-body">
-                                <div class="krds-check-area chk-column">
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-target_chk_1a">
-                                        <label for="filter-target_chk_1a">메뉴 (2)</label>
+            <aside class="page-content-aside">
+                <div class="aside">
+                    <dl class="filter-dl">
+                        <dt>검색 필터</dt>
+                        <dd>
+                            <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
+                                <li class="li accordion-item active">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion active" aria-expanded="true"
+                                            id="accordionHeader-id-0xy1ka4t"
+                                            aria-controls="accordionCollapse-id-0xy1ka4t">
+                                            <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-0xy1ka4t"
+                                        aria-labelledby="accordionHeader-id-0xy1ka4t">
+                                        <div class="accordion-body">
+                                            <div class="krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-target_chk_1a">
+                                                    <label for="filter-target_chk_1a">메뉴 (2)</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-target_chk_2a" checked="">
+                                                    <label for="filter-target_chk_2a">뉴스 (2,301)</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-target_chk_2a" checked="">
-                                        <label for="filter-target_chk_2a">뉴스 (2,301)</label>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-1dn6gd5r"
+                                            aria-controls="accordionCollapse-id-1dn6gd5r">
+                                            <div class="tit">검색 기간<span class="krds-badge bg-primary number">1 </span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-1dn6gd5r"
+                                        aria-labelledby="accordionHeader-id-1dn6gd5r">
+                                        <div class="accordion-body">
+                                            
+                                            <div class="form-group">
+                                                <div class="form-conts calendar-conts">
+                                                    <ul class="input-group range">
+                                                        <li>
+                                                            <label for="datepicker1a" class="form-tit">시작날짜</label>
+                                                            <input type="number" class="krds-input datepicker medium"
+                                                                id="datepicker1a" placeholder="" value="20231002">
+                                                        </li>
+                                                        <li class="mark sm">-</li>
+                                                        <li>
+                                                            <label for="datepicker2a" class="form-tit">종료날짜</label>
+                                                            <input type="number" class="krds-input datepicker medium"
+                                                                id="datepicker2a" placeholder="" value="20231202">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="li accordion-item">
-                        <h3 class="accordion-header">
-                            <button type="button" class="btn-accordion" aria-expanded="false"
-                                id="accordionHeader-id-1dn6gd5r"
-                                aria-controls="accordionCollapse-id-1dn6gd5r">
-                                <div class="tit">검색 기간<span class="krds-badge bg-primary number">1 </span>
-                                </div>
-                            </button>
-                        </h3>
-                        <div class="accordion-collapse collapse" role="region"
-                            id="accordionCollapse-id-1dn6gd5r"
-                            aria-labelledby="accordionHeader-id-1dn6gd5r">
-                            <div class="accordion-body">
-                                
-                                <div class="form-group">
-                                    <div class="form-conts calendar-conts">
-                                        <ul class="input-group range">
-                                            <li>
-                                                <label for="datepicker1a" class="form-tit">시작날짜</label>
-                                                <input type="number" class="krds-input datepicker medium"
-                                                    id="datepicker1a" placeholder="" value="20231002">
-                                            </li>
-                                            <li class="mark sm">-</li>
-                                            <li>
-                                                <label for="datepicker2a" class="form-tit">종료날짜</label>
-                                                <input type="number" class="krds-input datepicker medium"
-                                                    id="datepicker2a" placeholder="" value="20231202">
-                                            </li>
-                                        </ul>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-2xi413ug"
+                                            aria-controls="accordionCollapse-id-2xi413ug">
+                                            <div class="tit">자료 유형<span class="krds-badge bg-primary number">1</span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-2xi413ug"
+                                        aria-labelledby="accordionHeader-id-2xi413ug">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-data_chk_1a">
+                                                    <label for="filter-data_chk_1a">PDF (234)</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-data_chk_2a">
+                                                    <label for="filter-data_chk_2a">HWP (220)</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="li accordion-item">
-                        <h3 class="accordion-header">
-                            <button type="button" class="btn-accordion" aria-expanded="false"
-                                id="accordionHeader-id-2xi413ug"
-                                aria-controls="accordionCollapse-id-2xi413ug">
-                                <div class="tit">자료 유형<span class="krds-badge bg-primary number">1</span>
-                                </div>
-                            </button>
-                        </h3>
-                        <div class="accordion-collapse collapse" role="region"
-                            id="accordionCollapse-id-2xi413ug"
-                            aria-labelledby="accordionHeader-id-2xi413ug">
-                            <div class="accordion-body">
-                                <div class="row krds-check-area chk-column">
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-data_chk_1a">
-                                        <label for="filter-data_chk_1a">PDF (234)</label>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-3ty2lpxx"
+                                            aria-controls="accordionCollapse-id-3ty2lpxx">
+                                            <div class="tit">자료 이용 장소</div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-3ty2lpxx"
+                                        aria-labelledby="accordionHeader-id-3ty2lpxx">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-place_chk_1a">
+                                                    <label for="filter-place_chk_1a">장소1</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-place_chk_2a">
+                                                    <label for="filter-place_chk_2a">장소2</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-data_chk_2a">
-                                        <label for="filter-data_chk_2a">HWP (220)</label>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-4h755vbe"
+                                            aria-controls="accordionCollapse-id-4h755vbe">
+                                            <div class="tit">자료 언어</div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-4h755vbe"
+                                        aria-labelledby="accordionHeader-id-4h755vbe">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-lang_chk_1a">
+                                                    <label for="filter-lang_chk_1a">영어</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-lang_chk_2a">
+                                                    <label for="filter-lang_chk_2a">일본어</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="li accordion-item">
-                        <h3 class="accordion-header">
-                            <button type="button" class="btn-accordion" aria-expanded="false"
-                                id="accordionHeader-id-3ty2lpxx"
-                                aria-controls="accordionCollapse-id-3ty2lpxx">
-                                <div class="tit">자료 이용 장소</div>
-                            </button>
-                        </h3>
-                        <div class="accordion-collapse collapse" role="region"
-                            id="accordionCollapse-id-3ty2lpxx"
-                            aria-labelledby="accordionHeader-id-3ty2lpxx">
-                            <div class="accordion-body">
-                                <div class="row krds-check-area chk-column">
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-place_chk_1a">
-                                        <label for="filter-place_chk_1a">장소1</label>
-                                    </div>
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-place_chk_2a">
-                                        <label for="filter-place_chk_2a">장소2</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="li accordion-item">
-                        <h3 class="accordion-header">
-                            <button type="button" class="btn-accordion" aria-expanded="false"
-                                id="accordionHeader-id-4h755vbe"
-                                aria-controls="accordionCollapse-id-4h755vbe">
-                                <div class="tit">자료 언어</div>
-                            </button>
-                        </h3>
-                        <div class="accordion-collapse collapse" role="region"
-                            id="accordionCollapse-id-4h755vbe"
-                            aria-labelledby="accordionHeader-id-4h755vbe">
-                            <div class="accordion-body">
-                                <div class="row krds-check-area chk-column">
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-lang_chk_1a">
-                                        <label for="filter-lang_chk_1a">영어</label>
-                                    </div>
-                                    <div class="krds-form-check">
-                                        <input type="checkbox" id="filter-lang_chk_2a">
-                                        <label for="filter-lang_chk_2a">일본어</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </dd>
-        </dl>
-        <div class="filter-btn">
-            <button type="button" class="krds-btn medium tertiary">초기화</button>
-            <button type="button" class="krds-btn medium primary">적용하기</button>
-        </div>
-    </div>
-</aside> -->
-            <div class="page-content-body">
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <div class="filter-btn">
+                        <button type="button" class="krds-btn medium tertiary">초기화</button>
+                        <button type="button" class="krds-btn medium primary">적용하기</button>
+                    </div>
+                </div>
+            </aside>            <div class="page-content-body">
                 <div class="search-list-top">
                     <div class="search-list-result">
                         검색결과 <b class="total">249</b>건
@@ -380,111 +379,67 @@
                 </div>
                 <!-- //search-list-top -->
 
-                <div class="tab line full">
-                    <ul role="tablist">
-                        <li role="tab" aria-selected="true" class="active"><button type="button" class="btn-tab">전체(192)</button></li>
-                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">공간데이터 (100)</button></li>
-                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">파일데이터 (60)</button></li>
-                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">Open API (32)</button></li>
+                <div class="search-list-container">
+                    <ul class="card-list w-full">
+                        <li class="card-item">
+                            <div class="card">
+                                <div class="card-thumbnail">
+                                    <div class="card-thumbnail-icon"><i><img src="./assets/images/system/icon-1.png" alt=""></i></div>
+                                    <div class="card-thumbnail-caption">해양경계</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-content">
+                                        <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                        <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                        <div class="card-info">
+                                            <dl class="info-item">
+                                                <dt>등록일</dt>
+                                                <dd>2025-05-12</dd>
+                                            </dl>
+                                            <dl class="info-item">
+                                                <dt>수정일</dt>
+                                                <dd>2025-05-12</dd>
+                                            </dl>
+                                            <dl class="info-item">
+                                                <dt>조회</dt>
+                                                <dd>128</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
                     </ul>
-                </div>
-                <!-- //tab -->
-
-                <div class="search-list-container unif">
-                    <section>
-                        <div class="hgroup">
-                            <h2>공간데이터</h2>
-                            <a href="#" title="바로가기"><i class="svg-icon ico-more"></i></a>
+                    <!-- pagination -->
+                    <div class="krds-pagination">
+                        <span class="page-navi prev disabled" href="#">이전</span>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">3</a>
+                            <a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
+                            <a class="page-link" href="#">5</a>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <span class="page-link link-dot"></span>
+                            <a class="page-link" href="#">99</a>
                         </div>
-
-                        <div class="search-list-body">
-                            <ul class="card-list">
-                                <li class="card-item">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="card-header">
-                                                <div class="card-tag">
-                                                    <span class="krds-badge bg-light-primary">해양환경</span>
-                                                </div>
-                                                <div class="card-status">
-                                                    <span class="krds-badge bg-light-success">일반</span>
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
-                                                <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
-                                                <div class="card-info">
-                                                    <dl class="info-item">
-                                                        <dt>등록일</dt>
-                                                        <dd>2025-05-12</dd>
-                                                    </dl>
-                                                    <dl class="info-item">
-                                                        <dt>수정일</dt>
-                                                        <dd>2025-05-12</dd>
-                                                    </dl>
-                                                    <dl class="info-item">
-                                                        <dt>조회</dt>
-                                                        <dd>128</dd>
-                                                    </dl>
-                                                </div>
-                                            </div>
-                                            <div class="card-action">
-                                                <button type="button" class="krds-btn btn small">다운로드</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="card-item">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="card-header">
-                                                <div class="card-tag">
-                                                    <span class="krds-badge bg-light-primary">해양환경</span>
-                                                </div>
-                                                <div class="card-status">
-                                                    <span class="krds-badge bg-light-success">일반</span>
-                                                </div>
-                                            </div>
-                                            <div class="card-content">
-                                                <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
-                                                <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
-                                                <div class="card-info">
-                                                    <dl class="info-item">
-                                                        <dt>등록일</dt>
-                                                        <dd>2025-05-12</dd>
-                                                    </dl>
-                                                    <dl class="info-item">
-                                                        <dt>수정일</dt>
-                                                        <dd>2025-05-12</dd>
-                                                    </dl>
-                                                    <dl class="info-item">
-                                                        <dt>조회</dt>
-                                                        <dd>128</dd>
-                                                    </dl>
-                                                </div>
-                                            </div>
-                                            <div class="card-action">
-                                                <button type="button" class="krds-btn btn small">다운로드</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>                    <!-- //pagination -->
                 </div>
                 <!-- //search-list-container -->
             </div>
-            <!-- //page-content-body -->
+            <!-- // -->
         </div>
         <!-- //page-content -->
     </main>
+    <!-- //contents -->
+
     <!-- footer -->
     <footer id="krds-footer">
         <div class="foot-quick">
@@ -941,7 +896,7 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-
+     
 </body>
 
 </html>

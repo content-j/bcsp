@@ -1,7 +1,7 @@
-<!-- @pageTitle UI-DM-DT-00-002_데이터 목록(그리드 형식) -->
-<!-- @pageCreated 2025-05-12 -->
-<!-- @pageUpdated 2025-05-12 -->
-<!-- @pageNote 서브화면 스케치 작업 -->
+<!-- @pageTitle UI-DM-GW-00-004_API GATEWAY  관리 - API 엔드포인트 관리 상세 -->
+<!-- @pageCreated 2025-05-26 -->
+<!-- @pageUpdated 2025-05-26 -->
+<!-- @pageNote -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -21,8 +21,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <script src="//cdn.jsdelivr.net/npm/krds-uiux@1.0.3/resources/cdn/krds.min.js"></script>
-  <script type="module" crossorigin src="../assets/main-Dfv3lSjr.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/main-BRGOU7P7.css">
+  <script type="module" crossorigin src="./assets/main-BM33-rrn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-CM1MyyMZ.css">
 </head>
 
 <body>
@@ -184,271 +184,83 @@
             <li><a href="#" class="txt">데이터</a></li>
         </ol>
     </nav>    <!-- breadcrumb -->
-
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">데이터</h2>
+            <h2 class="page-header-title">API 엔드포인트  관리</h2>
         </div>
         <!-- //page-header -->
-        
-        <div class="search-top-box">
-            <div class="sch-form-wrap">
-                <div class="sch-input">
-                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
-                    <button type="button" class="krds-btn medium icon ico-search">
-                        <span class="sr-only">검색</span>
-                        <i class="svg-icon ico-sch"></i>
-                    </button>
-                </div>
-        
-                <div class="sch-recent">
-                    <strong>최근검색어</strong>
-                    <div class="krds-tag-wrap large">
-                        <span class="krds-btn-tag">뉴스
-                            <button type="button" class="btn-delete">
-                                <span class="sr-only">삭제</span>
-                            </button>
-                        </span>
-                        <span class="krds-btn-tag">뉴스
-                            <button type="button" class="btn-delete">
-                                <span class="sr-only">삭제</span>
-                            </button>
-                        </span>
-        
-                    </div>
-                </div>
-            </div>
-        </div>        <!-- //search-top-box -->
-
         <div class="page-content">
-            <aside class="page-content-aside">
-                <div class="aside">
-                    <dl class="filter-dl">
-                        <dt>검색 필터</dt>
-                        <dd>
-                            <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
-                                <li class="li accordion-item active">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion active" aria-expanded="true"
-                                            id="accordionHeader-id-0xy1ka4t"
-                                            aria-controls="accordionCollapse-id-0xy1ka4t">
-                                            <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-0xy1ka4t"
-                                        aria-labelledby="accordionHeader-id-0xy1ka4t">
-                                        <div class="accordion-body">
-                                            <div class="krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-target_chk_1a">
-                                                    <label for="filter-target_chk_1a">메뉴 (2)</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-target_chk_2a" checked="">
-                                                    <label for="filter-target_chk_2a">뉴스 (2,301)</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-1dn6gd5r"
-                                            aria-controls="accordionCollapse-id-1dn6gd5r">
-                                            <div class="tit">검색 기간<span class="krds-badge bg-primary number">1 </span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-1dn6gd5r"
-                                        aria-labelledby="accordionHeader-id-1dn6gd5r">
-                                        <div class="accordion-body">
-                                            
-                                            <div class="form-group">
-                                                <div class="form-conts calendar-conts">
-                                                    <ul class="input-group range">
-                                                        <li>
-                                                            <label for="datepicker1a" class="form-tit">시작날짜</label>
-                                                            <input type="number" class="krds-input datepicker medium"
-                                                                id="datepicker1a" placeholder="" value="20231002">
-                                                        </li>
-                                                        <li class="mark sm">-</li>
-                                                        <li>
-                                                            <label for="datepicker2a" class="form-tit">종료날짜</label>
-                                                            <input type="number" class="krds-input datepicker medium"
-                                                                id="datepicker2a" placeholder="" value="20231202">
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-2xi413ug"
-                                            aria-controls="accordionCollapse-id-2xi413ug">
-                                            <div class="tit">자료 유형<span class="krds-badge bg-primary number">1</span>
-                                            </div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-2xi413ug"
-                                        aria-labelledby="accordionHeader-id-2xi413ug">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-data_chk_1a">
-                                                    <label for="filter-data_chk_1a">PDF (234)</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-data_chk_2a">
-                                                    <label for="filter-data_chk_2a">HWP (220)</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-3ty2lpxx"
-                                            aria-controls="accordionCollapse-id-3ty2lpxx">
-                                            <div class="tit">자료 이용 장소</div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-3ty2lpxx"
-                                        aria-labelledby="accordionHeader-id-3ty2lpxx">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-place_chk_1a">
-                                                    <label for="filter-place_chk_1a">장소1</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-place_chk_2a">
-                                                    <label for="filter-place_chk_2a">장소2</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="li accordion-item">
-                                    <h3 class="accordion-header">
-                                        <button type="button" class="btn-accordion" aria-expanded="false"
-                                            id="accordionHeader-id-4h755vbe"
-                                            aria-controls="accordionCollapse-id-4h755vbe">
-                                            <div class="tit">자료 언어</div>
-                                        </button>
-                                    </h3>
-                                    <div class="accordion-collapse collapse" role="region"
-                                        id="accordionCollapse-id-4h755vbe"
-                                        aria-labelledby="accordionHeader-id-4h755vbe">
-                                        <div class="accordion-body">
-                                            <div class="row krds-check-area chk-column">
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-lang_chk_1a">
-                                                    <label for="filter-lang_chk_1a">영어</label>
-                                                </div>
-                                                <div class="krds-form-check">
-                                                    <input type="checkbox" id="filter-lang_chk_2a">
-                                                    <label for="filter-lang_chk_2a">일본어</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <div class="filter-btn">
-                        <button type="button" class="krds-btn medium tertiary">초기화</button>
-                        <button type="button" class="krds-btn medium primary">적용하기</button>
-                    </div>
-                </div>
-            </aside>            
             <div class="page-content-body">
-                <!-- 검색 결과 상단 영역 -->
-                <div class="search-list-top">
-                    <div class="search-list-result">
-                        검색결과 <b class="total">249</b>건
-                    </div>
-                    <div class="search-list-sort">
-                        <div class="search-legend-group">
-                            <button type="button" class="item krds-badge bg-light-danger">기밀</button>
-                            <button type="button" class="item krds-badge bg-light-warning">내부 전용</button>
-                            <button type="button" class="item krds-badge bg-light-success">일반</button>
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">API 엔드포인트 상세</h3>
+                </header>
+                <div class="view-container">
+                    <section>
+                        <h4 class="section-title">URL정보</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>서비스명 <i class="required"></i></th>
+                                    <td>활용시스템 메인</td>
+                                    <th>구분 <i class="required"></i></th>
+                                    <td>페이지</td>
+                                </tr>
+                                <tr>
+                                    <th>서비스 URL <i class="required"></i></th>
+                                    <td>/mof/main/portal.do</td>
+                                    <th>Method <i class="required"></i></th>
+                                    <td>GET</td>
+                                </tr>
+                                <tr>
+                                    <th>서비스 설명</th>
+                                    <td>활용시스템 메인 화면</td>
+                                    <th>수정일시 <i class="required"></i></th>
+                                    <td>2025-03-07 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th>시스템 URL명 <i class="required"></i></th>
+                                    <td>활용시스템 메인</td>
+                                    <th>제공 시스템 <i class="required"></i></th>
+                                    <td>활용시스템 메인 화면</td>
+                                </tr>
+                                <tr>
+                                    <th>시스템 URL <i class="required"></i></th>
+                                    <td>/main/portal.do</td>
+                                    <th>등록일시 <i class="required"></i></th>
+                                    <td>2025-03-01 10:00</td>
+                                </tr>
+                                <tr>
+                                    <th>시스템 URL 설명</th>
+                                    <td colspan="3">활용시스템 메인 화면</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">목록으로</a>
                         </div>
-                        <div class="sort-type-group">
-                            <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
-                            <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
+                        <div class="r">
+                            <a href="#" class="krds-btn primary">수정</a>
                         </div>
                     </div>
-                </div>
-                <!-- //search-list-top -->
 
-                <!-- 테이블 데이터 영역 -->
-                <div class="table table-list">
-                    <table>
-                        <caption class="sr-only">데이터 목록 테이블</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">순번</th>
-                                <th scope="col">데이터명</th>
-                                <th scope="col">관리기관</th>
-                                <th scope="col">카테고리</th>
-                                <th scope="col">자료유형</th>
-                                <th scope="col">등록일</th>
-                                <th scope="col">수정일</th>
-                                <th scope="col">보안등급</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="success">
-                                <td>1</td>
-                                <td>데이터명</td>
-                                <td>관리기관</td>
-                                <td>카테고리</td>
-                                <td>자료유형</td>
-                                <td>등록일</td>
-                                <td>수정일</td>
-                                <td><span class="krds-badge bg-light-success">일반</span></td>
-                            </tr>
-                            <tr class="danger">
-                                <td>2</td>
-                                <td>데이터명</td>
-                                <td>관리기관</td>
-                                <td>카테고리</td>
-                                <td>자료유형</td>
-                                <td>등록일</td>
-                                <td>수정일</td>
-                                <td><span class="krds-badge bg-light-danger">기밀</span></td>
-                            </tr>
-                            <tr class="warning">
-                                <td>3</td>
-                                <td>데이터명</td>
-                                <td>관리기관</td>
-                                <td>카테고리</td>
-                                <td>자료유형</td>
-                                <td>등록일</td>
-                                <td>수정일</td>
-                                <td><span class="krds-badge bg-light-warning">내부</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
-                <!-- //table table-list -->
+
             </div>
             <!-- //page-content-body -->
         </div>
         <!-- //page-content -->
     </main>
-    
+    <!-- //contents -->
+
     <!-- footer -->
     <footer id="krds-footer">
         <div class="foot-quick">
@@ -906,6 +718,7 @@
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
 
+    
 </body>
 
 </html>
