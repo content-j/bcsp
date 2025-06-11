@@ -20,9 +20,9 @@
     <meta name="apple-mobile-web-app-title" content="민군경" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
-    <script src="//cdn.jsdelivr.net/npm/krds-uiux@1.0.3/resources/cdn/krds.min.js"></script>
-  <script type="module" crossorigin src="./assets/main-BM33-rrn.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CM1MyyMZ.css">
+    <script src="./js/krds.min.js"></script>
+  <script type="module" src="./assets/main-BQbXWrFG.js"></script>
+  <link rel="stylesheet" href="./assets/main-Cosk_QAP.css">
 </head>
 
 <body>
@@ -269,19 +269,11 @@
                                 
                                 <div class="form-group">
                                     <div class="form-conts calendar-conts">
-                                        <ul class="input-group range">
-                                            <li>
-                                                <label for="datepicker1a" class="form-tit">시작날짜</label>
-                                                <input type="number" class="krds-input datepicker medium"
-                                                    id="datepicker1a" placeholder="" value="20231002">
-                                            </li>
-                                            <li class="mark sm">-</li>
-                                            <li>
-                                                <label for="datepicker2a" class="form-tit">종료날짜</label>
-                                                <input type="number" class="krds-input datepicker medium"
-                                                    id="datepicker2a" placeholder="" value="20231202">
-                                            </li>
-                                        </ul>
+                                        <div class="date-range">
+                                            <input type="text" class="datepicker start" placeholder="YYYY.MM.DD" aria-label="시작일" />
+                                            <span class="date-range-separator">-</span>
+                                            <input type="text" class="datepicker end" placeholder="YYYY.MM.DD" aria-label="종료일" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
