@@ -1,6 +1,6 @@
-<!-- @pageTitle UI-DM-WF-00-001_데이터 품질기준(표준단어)-목록조회(사용자,관리자) -->
-<!-- @pageCreated 2025-05-27 -->
-<!-- @pageUpdated 2025-05-27 -->
+<!-- @pageTitle UI-DM-MP-00-004_마이페이지 - 데이터 제공 신청 상세_원천데이터 제공 신청 -->
+<!-- @pageCreated 2025-06-20 -->
+<!-- @pageUpdated 2025-06-20 -->
 <!-- @pageNote -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -176,7 +176,7 @@
         </div>
         <!-- //헤더 컨텐츠 영역  -->
     </header>    <!-- //header -->
-
+    
     <!-- breadcrumb -->
     <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
         <ol class="breadcrumb">
@@ -184,83 +184,73 @@
             <li><a href="#" class="txt">데이터</a></li>
         </ol>
     </nav>    <!-- breadcrumb -->
+
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">민군경 데이터 운영 표준</h2>
+            <h2 class="page-header-title">마이페이지</h2>
         </div>
         <!-- //page-header -->
+
         <div class="page-content">
+            <header class="page-content-header">
+                <h3 class="page-content-header-title">회원정보</h3>
+            </header>
+            <!-- //page-content-header -->
             <div class="page-content-body">
                 <div class="tab line full nav-tab">
-                    <ul role="tablist">
-                        <li id="tab_login_01" class="active"><a href="#" class="btn-tab">민군경 데이터 운영 단어 <i class="sr-only">선택됨</i></a></li>
-                        <li id="tab_login_02"><a href="#" class="btn-tab">민군경 데이터 운영 용어</a></li>
-                        <li id="tab_login_03"><a href="#" class="btn-tab">민군경 데이터 운영 도메인</a></li>
-                        <li id="tab_login_04"><a href="#" class="btn-tab">민군경 데이터 운영 코드</a></li>
+                    <ul>
+                        <li><a href="#" class="btn-tab">데이터 활용 현황</a></li>
+                        <li><a href="#" class="btn-tab">데이터 제공 신청</a></li>
+                        <li class="active"><a href="#" class="btn-tab">회원정보 관리</a></li>
                     </ul>
                 </div>
 
-                <div class="search-default">
-                    <div class="input-group">
-                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
-                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                <div class="mypage-ui">
+                    <ul>
+                      <li>
+                        <span class="label">이름</span>
+                        <span class="value">홍길동</span>
+                      </li>
+                      <li>
+                        <span class="label">회원유형</span>
+                        <span class="value">기관 데이터 관리자</span>
+                      </li>
+                      <li>
+                        <span class="label">이메일</span>
+                        <span class="value email">aaa@naver.com</span>
+                      </li>
+                      <li>
+                        <span class="label">전화번호</span>
+                        <span class="value phone">010-0000-0000</span>
+                      </li>
+                      <li>
+                        <span class="label">소속기관</span>
+                        <span class="value">국립해양조사원</span>
+                      </li>
+                      <li>
+                        <span class="label">소속부서</span>
+                        <span class="value">해양관측과</span>
+                      </li>
+                      <li>
+                        <span class="label">직급</span>
+                        <span class="value">국립해양조사원</span>
+                      </li>
+                      <li>
+                        <span class="label">접근등급</span>
+                        <span class="value badge badge-round badge-danger">1레벨 접근등급</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="footer-actions center">
+                    <div>
+                        <button type="button" class="krds-btn primary">회원정보 수정</button>
                     </div>
-                </div>
+                  </div>
+                  
+                  
 
-                <div class="search-list-top">
-                    <div class="search-list-result">
-                        검색결과 <b class="total">249</b>건
-                    </div>
-                </div>
                 
-                <div class="post-container">
-                    <div class="table table-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>순번</th>
-                                    <th>단어명</th>
-                                    <th>영문명</th>
-                                    <th>영문약어명</th>
-                                    <th>이음 동의어</th>
-                                    <th>금칙어</th>
-                                    <th>도메인 분류명</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>포털</td>
-                                    <td>공통 표준 분류 코드명</td>
-                                    <td>설명</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="krds-pagination">
-                        <span class="page-navi prev disabled" href="#">이전</span>
-                        <div class="page-links">
-                            <a class="page-link" href="#">1</a>
-                            <a class="page-link" href="#">2</a>
-                            <a class="page-link" href="#">3</a>
-                            <a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
-                            <a class="page-link" href="#">5</a>
-                            <a class="page-link" href="#">6</a>
-                            <a class="page-link" href="#">7</a>
-                            <a class="page-link" href="#">8</a>
-                            <span class="page-link link-dot"></span>
-                            <a class="page-link" href="#">99</a>
-                        </div>
-                        <a class="page-navi next" href="#">다음</a>
-                    </div>
-                    <div class="action-fab">
-                        <a href="#" class="krds-btn medium tertiary">등록</a>
-                    </div>
-                </div>
-
 
             </div>
             <!-- //page-content-body -->
@@ -725,8 +715,7 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-
-    
+     
 </body>
 
 </html>

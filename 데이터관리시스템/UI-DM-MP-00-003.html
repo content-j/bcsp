@@ -1,6 +1,6 @@
-<!-- @pageTitle UI-DM-WF-00-001_데이터 품질기준(표준단어)-목록조회(사용자,관리자) -->
-<!-- @pageCreated 2025-05-27 -->
-<!-- @pageUpdated 2025-05-27 -->
+<!-- @pageTitle UI-DM-MP-00-003_마이페이지 - 데이터 제공 신청 목록_원천데이터 제공 신청 목록 -->
+<!-- @pageCreated 2025-06-20 -->
+<!-- @pageUpdated 2025-06-20 -->
 <!-- @pageNote -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -186,21 +186,35 @@
     </nav>    <!-- breadcrumb -->
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">민군경 데이터 운영 표준</h2>
+            <h2 class="page-header-title">마이페이지</h2>
         </div>
         <!-- //page-header -->
         <div class="page-content">
             <div class="page-content-body">
                 <div class="tab line full nav-tab">
-                    <ul role="tablist">
-                        <li id="tab_login_01" class="active"><a href="#" class="btn-tab">민군경 데이터 운영 단어 <i class="sr-only">선택됨</i></a></li>
-                        <li id="tab_login_02"><a href="#" class="btn-tab">민군경 데이터 운영 용어</a></li>
-                        <li id="tab_login_03"><a href="#" class="btn-tab">민군경 데이터 운영 도메인</a></li>
-                        <li id="tab_login_04"><a href="#" class="btn-tab">민군경 데이터 운영 코드</a></li>
+                    <ul>
+                        <li><a href="#" class="btn-tab">데이터 활용 현황</a></li>
+                        <li class="active"><a href="#" class="btn-tab">데이터 제공 신청</a></li>
+                        <li><a href="#" class="btn-tab">회원정보 관리</a></li>
                     </ul>
                 </div>
 
                 <div class="search-default">
+                    <div>
+                        <strong>처리상태</strong>
+                        <select name="" id="" class="krds-form-select">
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <strong>신청일자</strong>
+                        <div class="date-range">
+                            <input type="text" class="datepicker start" placeholder="YYYY.MM.DD">
+                            <span class="date-range-separator">-</span>
+                            <input type="text" class="datepicker end" placeholder="YYYY.MM.DD">
+                        </div>
+                    </div>
                     <div class="input-group">
                         <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
                         <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
@@ -219,23 +233,23 @@
                             <thead>
                                 <tr>
                                     <th>순번</th>
-                                    <th>단어명</th>
-                                    <th>영문명</th>
-                                    <th>영문약어명</th>
-                                    <th>이음 동의어</th>
-                                    <th>금칙어</th>
-                                    <th>도메인 분류명</th>
+                                    <th>데이터명</th>
+                                    <th>관리기관</th>
+                                    <th>카테고리</th>
+                                    <th>신청일</th>
+                                    <th>처리일</th>
+                                    <th>승인상태</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>포털</td>
-                                    <td>공통 표준 분류 코드명</td>
-                                    <td>설명</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
+                                    <td>7</td>
+                                    <td>유향유속관측</td>
+                                    <td>해양수산부</td>
+                                    <td>해양안전</td>
+                                    <td>2023-02-07</td>
+                                    <td>2023-02-15</td>
+                                    <td>승인</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -255,12 +269,7 @@
                             <a class="page-link" href="#">99</a>
                         </div>
                         <a class="page-navi next" href="#">다음</a>
-                    </div>
-                    <div class="action-fab">
-                        <a href="#" class="krds-btn medium tertiary">등록</a>
-                    </div>
-                </div>
-
+                    </div>                </div>
 
             </div>
             <!-- //page-content-body -->

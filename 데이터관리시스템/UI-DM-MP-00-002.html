@@ -1,6 +1,6 @@
-<!-- @pageTitle UI-DM-WF-00-001_데이터 품질기준(표준단어)-목록조회(사용자,관리자) -->
-<!-- @pageCreated 2025-05-27 -->
-<!-- @pageUpdated 2025-05-27 -->
+<!-- @pageTitle UI-DM-MP-00-002_마이페이지 - 데이터 활용 상세 -->
+<!-- @pageCreated 2025-06-20 -->
+<!-- @pageUpdated 2025-06-20 -->
 <!-- @pageNote -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -176,7 +176,7 @@
         </div>
         <!-- //헤더 컨텐츠 영역  -->
     </header>    <!-- //header -->
-
+    
     <!-- breadcrumb -->
     <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
         <ol class="breadcrumb">
@@ -184,84 +184,119 @@
             <li><a href="#" class="txt">데이터</a></li>
         </ol>
     </nav>    <!-- breadcrumb -->
+
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">민군경 데이터 운영 표준</h2>
+            <h2 class="page-header-title">마이페이지</h2>
         </div>
         <!-- //page-header -->
+
         <div class="page-content">
+            <header class="page-content-header">
+                <h3 class="page-content-header-title">데이터 활용 현황 상세</h3>
+            </header>
+            <!-- //page-content-header -->
+            
             <div class="page-content-body">
-                <div class="tab line full nav-tab">
-                    <ul role="tablist">
-                        <li id="tab_login_01" class="active"><a href="#" class="btn-tab">민군경 데이터 운영 단어 <i class="sr-only">선택됨</i></a></li>
-                        <li id="tab_login_02"><a href="#" class="btn-tab">민군경 데이터 운영 용어</a></li>
-                        <li id="tab_login_03"><a href="#" class="btn-tab">민군경 데이터 운영 도메인</a></li>
-                        <li id="tab_login_04"><a href="#" class="btn-tab">민군경 데이터 운영 코드</a></li>
-                    </ul>
-                </div>
+                <div class="view-container">
 
-                <div class="search-default">
-                    <div class="input-group">
-                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
-                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
-                    </div>
-                </div>
-
-                <div class="search-list-top">
-                    <div class="search-list-result">
-                        검색결과 <b class="total">249</b>건
-                    </div>
-                </div>
-                
-                <div class="post-container">
-                    <div class="table table-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>순번</th>
-                                    <th>단어명</th>
-                                    <th>영문명</th>
-                                    <th>영문약어명</th>
-                                    <th>이음 동의어</th>
-                                    <th>금칙어</th>
-                                    <th>도메인 분류명</th>
-                                </tr>
-                            </thead>
+                    <section class="t-section">
+                        <div class="post-category">
+                            <i aria-hidden="true"><img src="./assets/images/system/boolen1@18x20.png" alt=""></i>
+                            <strong>해양환경</strong>
+                        </div>
+                        <div class="subject">
+                            <span class="badge badge-round badge-stblue">csv</span>
+                            <strong>해양기상관측(기온,기압,풍향,풍속)</strong>
+                        </div>
+                        <div class="desc">조위관측소 , 해양관측부이, 해양관측소, 종합해양과학기지 등에 설치한 관측장비로 수집한 데이터를 제공합니다.</div>
+                        
+                        <div class="action-fab">
+                            <button type="button" class="krds-btn secondary">다운로드 <i class="svg-icon ico-down"></i></button>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h4 class="section-title">데이터 상세 정보</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px;">
+                                <col style="width: 360px;">
+                                <col style="width: 200px;">
+                                <col style="width: 360px;">
+                            </colgroup>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>포털</td>
-                                    <td>공통 표준 분류 코드명</td>
-                                    <td>설명</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
-                                    <td>등록자 ID</td>
+                                    <th>메타데이터명</th>
+                                    <td>해양기상관측</td>
+                                    <th>데이터 공유 범위</th>
+                                    <td>전체 공개</td>
+                                </tr>
+                                <tr>
+                                    <th>제공기관</th>
+                                    <td>국립해양조사원</td>
+                                    <th>관리부서명 / 담당자</th>
+                                    <td>해양관측과 / 김철수</td>
+                                </tr>
+                                <tr>
+                                    <th>현행화 주기</th>
+                                    <td>불규칙(수시)</td>
+                                    <th>현행화 예정시기</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th>등록일</th>
+                                    <td>2023-03-26</td>
+                                    <th>최종갱신일</th>
+                                    <td>2025-03-02</td>
+                                </tr>
+                                <tr>
+                                    <th>자료유형</th>
+                                    <td>파일데이터(shp)</td>
+                                    <th></th>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="krds-pagination">
-                        <span class="page-navi prev disabled" href="#">이전</span>
-                        <div class="page-links">
-                            <a class="page-link" href="#">1</a>
-                            <a class="page-link" href="#">2</a>
-                            <a class="page-link" href="#">3</a>
-                            <a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
-                            <a class="page-link" href="#">5</a>
-                            <a class="page-link" href="#">6</a>
-                            <a class="page-link" href="#">7</a>
-                            <a class="page-link" href="#">8</a>
-                            <span class="page-link link-dot"></span>
-                            <a class="page-link" href="#">99</a>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">데이터 활용 현황</h4>
+                        
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px;">
+                                <col style="width: 360px;">
+                                <col style="width: 200px;">
+                                <col style="width: 360px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>활용 신청 정보</th>
+                                    <td>파일데이터 다운로드</td>
+                                    <th>활용목적</th>
+                                    <td>기타</td>
+                                </tr>
+                                <tr>
+                                    <th>활용목적기타사유</th>
+                                    <td colspan="3">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">목록으로</a>
                         </div>
-                        <a class="page-navi next" href="#">다음</a>
+                        <div class="r">
+                            <button type="button" class="krds-btn primary">바로가기 <i class="svg-icon ico-login-go"></i></button>
+                        </div>
                     </div>
-                    <div class="action-fab">
-                        <a href="#" class="krds-btn medium tertiary">등록</a>
-                    </div>
+                
                 </div>
-
-
+                <!-- //write-container -->
             </div>
             <!-- //page-content-body -->
         </div>
@@ -725,8 +760,7 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-
-    
+     
 </body>
 
 </html>
