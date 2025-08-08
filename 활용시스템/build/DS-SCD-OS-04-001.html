@@ -195,7 +195,7 @@
                         <h3>분석 결과 레이어</h3>
                     </div>
                     <div class="map-search-result-list">
-                        <ul class="analysis-layer-list">
+                        <ul class="analysis-layer-list draggable-list">
                             <li>
                                 <div class="layer-item">
                                     <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
@@ -509,8 +509,8 @@
                             <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
                             <div class="option-panel-title">표출레이어</div>
                             <div class="option-panel-content">
-                                <ul class="layer-list">
-                                    <li class="layer-list-item">
+                                <ul class="layer-list draggable-list">
+                                    <li class="layer-list-item drag-placeholder">
                                         <span class="layer-icon ico-layer-1"></span>
                                         <span class="layer-label">암초</span>
                                         <button class="layer-remove" type="button"></button>
@@ -708,8 +708,8 @@
     const popupClose = document.getElementById('popupClose');
     document.querySelectorAll('.btn-control-popup').forEach(btn => {
         btn.addEventListener('click', function(e) {
-            popupLayer.classList.add('show');
-            popupOverlay.classList.add('show');
+            //popupLayer.classList.add('show');
+            //popupOverlay.classList.add('show');
         });
     });
     function closePopup() {
@@ -909,70 +909,67 @@
 
     // analysis-layer-list 드래그&드롭 정렬
     (function() {
-      const list = document.querySelector('.analysis-layer-list');
-      if (!list) return;
-      let draggingEl = null;
-      let placeholder = null;
-      let offsetY = 0;
+        const lists = document.querySelectorAll('.draggable-list');
+        lists.forEach(list => {
+        let draggingEl = null;
+        let placeholder = null;
+        let offsetY = 0;
 
-      list.querySelectorAll('.layer-drag').forEach(handle => {
-        handle.style.cursor = 'grab';
-        handle.addEventListener('mousedown', function(e) {
-          e.preventDefault();
-          draggingEl = handle.closest('li');
-          placeholder = document.createElement('li');
-          placeholder.className = 'drag-placeholder';
-          placeholder.style.height = draggingEl.offsetHeight + 'px';
-          draggingEl.parentNode.insertBefore(placeholder, draggingEl.nextSibling);
-          draggingEl.classList.add('dragging');
-          offsetY = e.clientY - draggingEl.getBoundingClientRect().top;
-          draggingEl.style.width = draggingEl.offsetWidth + 'px';
-          draggingEl.style.position = 'absolute';
-          draggingEl.style.zIndex = 1000;
-          draggingEl.style.pointerEvents = 'none';
-          document.body.appendChild(draggingEl);
-          moveAt(e.pageX, e.pageY);
-          document.body.style.userSelect = 'none';
+        list.querySelectorAll('.layer-drag, .layer-icon').forEach(handle => {
+            handle.style.cursor = 'grab';
+            handle.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            draggingEl = handle.closest('li');
+            placeholder = document.createElement('li');
+            placeholder.className = 'drag-placeholder';
+            placeholder.style.height = draggingEl.offsetHeight + 'px';
+            draggingEl.parentNode.insertBefore(placeholder, draggingEl.nextSibling);
+            draggingEl.classList.add('dragging');
+            offsetY = e.clientY - draggingEl.getBoundingClientRect().top;
+            draggingEl.style.width = draggingEl.offsetWidth + 'px';
+            draggingEl.style.position = 'absolute';
+            draggingEl.style.zIndex = 1002;
+            draggingEl.style.pointerEvents = 'none';
+            document.body.appendChild(draggingEl);
+            moveAt(e.pageX, e.pageY);
+            document.body.style.userSelect = 'none';
+            });
         });
-      });
 
-      function moveAt(pageX, pageY) {
-        if (!draggingEl) return;
-        draggingEl.style.left = list.getBoundingClientRect().left + 'px';
-        draggingEl.style.top = (pageY - offsetY) + 'px';
-      }
-
-      document.addEventListener('mousemove', function(e) {
-        if (!draggingEl) return;
-        moveAt(e.pageX, e.pageY);
-        // 위치 계산
-        const rects = Array.from(list.children).filter(li => li !== draggingEl && li !== placeholder);
-        for (const li of rects) {
-          const rect = li.getBoundingClientRect();
-          if (e.clientY < rect.top + rect.height / 2) {
-            list.insertBefore(placeholder, li);
-            break;
-          } else {
-            list.appendChild(placeholder);
-          }
+        function moveAt(pageX, pageY) {
+            if (!draggingEl) return;
+            draggingEl.style.left = list.getBoundingClientRect().left + 'px';
+            draggingEl.style.top = (pageY - offsetY) + 'px';
         }
-      });
 
-      document.addEventListener('mouseup', function(e) {
-        if (!draggingEl) return;
-        draggingEl.classList.remove('dragging');
-        draggingEl.style.position = '';
-        draggingEl.style.zIndex = '';
-        draggingEl.style.pointerEvents = '';
-        draggingEl.style.width = '';
-        draggingEl.style.left = '';
-        draggingEl.style.top = '';
-        list.insertBefore(draggingEl, placeholder);
-        placeholder.remove();
-        placeholder = null;
-        draggingEl = null;
-        document.body.style.userSelect = '';
-      });
+        document.addEventListener('mousemove', function (e) {
+            if (!draggingEl) return;
+            moveAt(e.pageX, e.pageY);
+
+            const rects = Array.from(list.children).filter(li => li !== draggingEl && li !== placeholder);
+            for (const li of rects) {
+            const rect = li.getBoundingClientRect();
+            if (e.clientY < rect.top + rect.height / 2) {
+                list.insertBefore(placeholder, li);
+                return;
+            }
+            }
+            list.appendChild(placeholder);
+        });
+
+        document.addEventListener('mouseup', function () {
+            if (!draggingEl) return;
+            draggingEl.classList.remove('dragging');
+            Object.assign(draggingEl.style, {
+            position: '', zIndex: '', pointerEvents: '', width: '', left: '', top: ''
+            });
+            list.insertBefore(draggingEl, placeholder);
+            placeholder.remove();
+            placeholder = null;
+            draggingEl = null;
+            document.body.style.userSelect = '';
+        });
+        });
     })();
 
     
