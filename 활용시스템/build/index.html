@@ -14,8 +14,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="google" content="notranslate" />
     <script src="./js/krds.min.js"></script>
-  <script type="module" src="./assets/main-BBWwqd8h.js"></script>
-  <link rel="stylesheet" href="./assets/main-CjPLfGCE.css">
+  <script type="module" src="./assets/main-RDeDJmTU.js"></script>
+  <link rel="stylesheet" href="./assets/main-CfTfd8cA.css">
 </head>
 
 
@@ -823,16 +823,105 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-
+    <!-- modal
+    조건 값으로 없을 떄 와 안보이기 했을 떄 처리 요청
+    -->
+    <section id="notice-popup" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_notice">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+            <h2 id="tit_modal_notice" class="modal-title">
+                공지사항 팝업
+            </h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+            <div class="conts-area">
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- 공지 1 -->
+                        <div class="swiper-slide">
+                            <div class="notice-content">
+                                <p>
+                                정기적인 안전점검 및 정전 작업 시행으로 인해 서비스가 일시 중단됩니다.<br>
+                                <br>
+                                ○ 일시 : 2025년 4월 5일(토) 10:00 ~ 14:00 (4시간 예정)<br>
+                                ○ 사유 : 시스템 안정성 및 보안 점검<br>
+                                ○ 문의 : 000과 (051-000-0000)<br>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 공지 2 (예시, 여러 개일 경우) -->
+                        <div class="swiper-slide">
+                            <div class="notice-content">
+                                <p>
+                                    두 번째 공지 내용입니다. 추가 슬라이드 테스트.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="krds-check-area">
+                    <div class="krds-form-check">
+                        <input type="checkbox" id="hide-today">
+                        <label for="hide-today">오늘 하루 그만 보기</label>
+                    </div>
+                    <div class="krds-form-check">
+                        <input type="checkbox" id="hide-week">
+                        <label for="hide-week">1주일 동안 그만 보기</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+            <button type="button" class="krds-btn medium primary close-modal">확인</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+            <span class="sr-only">닫기</span>
+            <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+        </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+    <!-- //modal -->
     <script>
         document.addEventListener('DOMContentLoaded', function(){
             const mainVisualSearch = document.querySelector('.main-visual-search');
             const background = mainVisualSearch.querySelector('.background');
-
             background.classList.add('init');
-
-            
         })
+    </script>
+
+    <script>
+        // 슬라이드 개수 체크
+        const slideCount = document.querySelectorAll('.swiper-slide').length;
+
+        if (slideCount > 1) {
+        new Swiper('.swiper', {
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+        } else {
+        document.querySelector('.swiper-pagination').style.display = 'none';
+        }
+
+        // 닫기 이벤트
+        document.getElementById('popup-close').addEventListener('click', closePopup);
+        document.getElementById('popup-ok').addEventListener('click', closePopup);
+
+        function closePopup() {
+            const popup = document.getElementById('notice-popup');
+            popup.remove(); // DOM 제거 → 메모리 회수
+        }
     </script>
 </body>
 
