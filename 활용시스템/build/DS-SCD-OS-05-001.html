@@ -1,0 +1,535 @@
+<!-- @pageTitle DS-SCD-OS-05-001_수심 및 해저지형 변화 양상 예측 기술 -->
+<!-- @pageCreated 2025-09-29 -->
+<!-- @pageUpdated 2025-09-29 -->
+<!-- @pageNote 지도 타입2 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>민군경 | 활용시스템</title>
+  <meta name="description" content="민군경 활용시스템" />
+  <meta name="viewport" content="width=1240" />
+  <meta name="author" content="민군경 활용시스템" />
+  <meta name="keywords" content="민군경 활용시스템" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google" content="notranslate" />
+  <script src="./js/krds.min.js"></script>
+  <script type="module" src="./assets/main-BNFKPoqy.js"></script>
+  <link rel="stylesheet" href="./assets/main-DeeJfviY.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="map-header">
+    <header id="krds-header">
+      <!-- 헤더 컨텐츠 영역  -->
+      <div class="header-in">
+        <!-- 헤더 상단 기타메뉴 -->
+        <div class="header-container">
+          <div class="inner">
+            <div class="header-branding">
+              <h2 class="logo">
+                <a href="#" aria-label="홈 바로가기"><span class="sr-only">데이터 관리시스템</span></a>
+              </h2>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">제공데이터</a>
+                  <div class="gnb-depth-list">
+                    <ul>
+                      <li>
+                        <a href="#" class="is-link">제공 데이터</a>
+                      </li>
+                      <li>
+                        <a href="#" class="is-link">메타 데이터</a>
+                      </li>
+                      <li>
+                        <a href="#" class="is-link">메인 분석 지도</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">OpenAPI</a>
+                  <div class="gnb-depth-list">
+                    <ul>
+                      <li>
+                        <a href="#" class="is-link">OPEN API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">게시판</a>
+                  <div class="gnb-depth-list">
+
+                    <ul>
+                      <li>
+                        <a href="#" class="is-link">공지사항</a>
+                      </li>
+                      <li>
+                        <a href="#" class="is-link">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#" class="is-link">Q&A</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">관리자</a>
+                  <!-- gnb-main-list -->
+                  <div class="gnb-depth-list last">
+                    <ul>
+                      <li class="depth-2">
+                        <a href="#" class="is-link">제공 데이터 관리</a>
+                        <ul>
+                          <li><a href="#">데이터 보안등급 관리</a></li>
+                          <li><a href="#">데이터 통계</a></li>
+                          <li><a href="#">검색 통계</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth-2">
+                        <a href="#" class="is-link">OPEN API 관리</a>
+                        <ul>
+                          <li><a href="#">OPEN API 신청 관리</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth-2">
+                        <a href="#" class="is-link">사용자 정보 관리</a>
+                        <ul>
+                          <li><a href="#">사용자 정보 관리</a></li>
+                          <li><a href="#">접속통계</a></li>
+                        </ul>
+                      </li>
+                      <li class="depth-2">
+                        <a href="#" class="is-link">게시판 관리</a>
+                        <ul>
+                          <li><a href="#">공지사항 관리</a></li>
+                          <li><a href="#">FAQ 관리</a></li>
+                          <li><a href="#">Q&A 관리</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //gnb-main-list -->
+                </li>
+              </ul>
+            </nav>
+            <div class="header-actions">
+              <a href="#" type="button" class="btn-navi navi-row my">홍길동님</a>
+              <a href="#" type="button" class="btn-navi navi-row login">로그아웃</a>
+            </div>
+          </div>
+        </div>
+        <!-- //헤더 상단 기타메뉴 -->
+      </div>
+      <!-- //헤더 컨텐츠 영역  -->
+    </header>
+  </div>
+  <!-- //header -->
+  <div class="map-container" id="Depth">
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup-layer" id="" style="display: block;">
+      <button class="popup-close" id="popupClose" type="button" title="팝업 닫기"><i class="svg-icon ico-close"></i></button>
+      <div class="popup-header">
+        <span>도엽 번호 : 352603-1-003</span>
+      </div>
+      <div class="popup-content">
+        <div class="data-header">
+          <span>데이터 개수 : 총 <strong>43,992</strong> 개</span>
+        </div>
+        
+        <div class="map-visualization">
+          <div class="map-coords">
+            <span class="coord-top">36.00°N</span>
+            <span class="coord-bottom">126.00°N</span>
+          </div>
+        </div>
+        <div class="map-caption">
+          * 선택한 년도의 수심 측량 포인트가 표출됩니다.
+        </div>
+        <div class="year-buttons">
+          <div class="decade-buttons">
+            <button class="year-btn">1950</button>
+            <button class="year-btn">1960</button>
+            <button class="year-btn">1970</button>
+            <button class="year-btn">1980</button>
+            <button class="year-btn">1990</button>
+            <button class="year-btn">2000</button>
+            <button class="year-btn active">2010</button>
+            <button class="year-btn">2020</button>
+          </div>
+          <div class="individual-year-buttons">
+            <button class="year-btn">2010</button>
+            <button class="year-btn" disabled>2011</button>
+            <button class="year-btn">2012</button>
+            <button class="year-btn active">2013</button>
+            <button class="year-btn">2014</button>
+            <button class="year-btn">2015</button>
+            <button class="year-btn">2016</button>
+            <button class="year-btn">2017</button>
+            <button class="year-btn">2018</button>
+            <button class="year-btn">2019</button>
+          </div>
+        </div>
+
+        
+        <div class="map-sheet-list">
+          <div class="sheet-table">
+            <div class="sheet-header">
+              <div class="header-cell l">도엽 목록</div>
+              <div class="header-cell y">연도</div>
+            </div>
+            <div class="sheet-body-wrap">
+              <div class="sheet-body l">
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957-2-1</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957-2-1</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957-2-1</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957-2-1</div>
+                </div>
+              </div>
+              <div class="sheet-body y">
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957</div>
+                </div>
+                <div class="sheet-row">
+                  <div class="sheet-cell">1957</div>
+                </div>
+              </div>
+
+              <div class="sheet-nodata">자료가 없습니다.</div>
+
+            </div>
+          </div>
+        </div>
+        <!-- // map-sheet-list -->
+        <div class="map-caption">
+          * 선택한 셀 영역을 포함하는 측량원도 목록이 표출됩니다.
+        </div>
+
+      </div>
+      <!-- // popup-content -->
+    </div>
+    <!-- // popup-layer -->
+    
+    <!-- 새로 추가 -->
+    <div class="map-title"><h2>수심 및 해저지형 변화 양상 예측 기술 </h2></div>
+
+    <div class="zoom-notice">
+      셀 별 상세정보를 원하시면, 지도를 확대해주세요. (줌 레벨 7 이상)
+    </div>
+
+    <div class="display-grid-panel">
+      <h3>표시 격자</h3>
+      <div class="grid-options">
+        <div class="grid-option">
+          <div class="krds-form-check">
+              <input type="checkbox" name="rd1" id="chk_1" checked>
+              <label for="chk_1">1:5000</label>
+          </div>
+        </div>
+        <div class="grid-option">
+          <div class="krds-form-check">
+              <input type="checkbox" name="rd1" id="chk_2">
+              <label for="chk_2">1:25,000</label>
+          </div>
+        </div>
+        <div class="grid-option">
+          <div class="krds-form-check">
+              <input type="checkbox" name="rd1" id="chk_3">
+              <label for="chk_3">1:50,000</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scale-indicator">
+      <span class="scale-text">1:25,000</span>
+      <div class="scale-line"></div>
+    </div>
+
+    <div class="survey-years-popup" style="left: 2rem;top:25rem;display: block;">
+      <h3>과거 측량 연도</h3>
+      <div class="years-grid">
+        <div class="year-cell">1952</div>
+        <div class="year-cell">1955</div>
+        <div class="year-cell">1957</div>
+        <div class="year-cell">1960</div>
+        <div class="year-cell">1970</div>
+        <div class="year-cell">1971</div>
+        <div class="year-cell">1990</div>
+        <div class="year-cell">1993</div>
+        <div class="year-cell">2000</div>
+        <div class="year-cell">2005</div>
+        <div class="year-cell">2013</div>
+        <div class="year-cell">2016</div>
+        <div class="year-cell">2017</div>
+        <div class="year-cell">-</div>
+        <div class="year-cell">-</div>
+      </div>
+      <div class="years-summary">
+        총 <strong>13</strong>개년도
+      </div>
+    </div>
+
+    
+    <!-- 지도 영역 -->
+    <div class="map-area">
+
+      <div class="analysis-options">
+        <h3>분석 옵션</h3>
+        <div class="option-buttons">
+          <button class="option-btn active" data-option="survey">
+            <div class="btn-icon">
+              <i class="svg-icon ico-survey"></i>
+            </div>
+            <span>측량 현황</span>
+          </button>
+          <button class="option-btn" data-option="depth">
+            <div class="btn-icon">
+              <i class="svg-icon ico-depth"></i>
+            </div>
+            <span>수심 통계</span>
+          </button>
+          <button class="option-btn" data-option="grid">
+            <div class="btn-icon">
+              <i class="svg-icon ico-grid"></i>
+            </div>
+            <span>격자 수심</span>
+          </button>
+        </div>
+      </div>
+      <div id="map"><img class="test-img" src="./assets/images/map/map.png" alt=""></div>
+    </div>
+    <!-- //지도 영역 -->
+
+    <!-- 지도 컨트롤 -->
+    <div class="map-control-panel">
+      <div class="control-group">
+        <div class="control-btn-row">
+          <button class="btn-control-btn" type="button">
+            <i class="svg-icon ico-location"></i>
+            <div class="btn-tooltip">관심위치</div>
+          </button>
+        </div>
+
+        <div class="control-btn-row">
+          <button class="btn-control-popup" type="button" data-option-target="optionPanel1" aria-pressed="false">
+            <i class="svg-icon ico-map-bg"></i>
+            <div class="btn-tooltip">배경지도</div>
+          </button>
+          <div class="option-panel" id="optionPanel1">
+            <div class="option-panel-inner">
+              <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
+              <div class="option-panel-title">배경지도 선택</div>
+              <div class="option-panel-content">
+                <div class="option-panel-item">
+                  <div class="hgroup">
+                    <h4>배경색</h4>
+                  </div>
+                  <div class="check-bg-color">
+                    <label class="check-bg-color-item" style="background-color: #fff;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                    <label class="check-bg-color-item" style="background-color: #afb6bb;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                    <label class="check-bg-color-item" style="background-color: #586269;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                    <label class="check-bg-color-item" style="background-color: #3d4348;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                    <label class="check-bg-color-item" style="background-color: #0e0f11;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                    <label class="check-bg-color-item" style="background-color: #000000;">
+                      <input type="radio" name="bg-color" value="">
+                    </label>
+                  </div>
+                </div>
+                <div class="option-panel-item">
+                  <div class="hgroup">
+                    <h4>배경지도</h4>
+                    <div class="opacity-control">
+                      <strong>투명도</strong>
+                      <input type="range" min="0" max="100" value="50" step="1" title="투명도">
+                    </div>
+                  </div>
+
+                  <div class="bg-map-list">
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-1.png" alt=""></div>
+                      <div class="check-bg-map-title">해안선</div>
+                    </label>
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-2.png" alt=""></div>
+                      <div class="check-bg-map-title">약최고고조면</div>
+                    </label>
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-3.png" alt=""></div>
+                      <div class="check-bg-map-title">기본수준면</div>
+                    </label>
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-4.png" alt=""></div>
+                      <div class="check-bg-map-title">영문주기</div>
+                    </label>
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-5.png" alt=""></div>
+                      <div class="check-bg-map-title">전자해도</div>
+                    </label>
+                    <label class="check-bg-map">
+                      <input type="radio" name="bg-map" value="">
+                      <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-6.png" alt=""></div>
+                      <div class="check-bg-map-title">영상맵</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control-btn-row group">
+          <button class="btn-control-btn" type="button">
+            <i class="svg-icon ico-guide"></i>
+            <div class="btn-tooltip">가이드</div>
+          </button>
+          <button class="btn-control-btn no-active" type="button" aria-pressed="false">
+            <i class="svg-icon ico-export"></i>
+            <div class="btn-tooltip">내보내기</div>
+          </button>
+        </div>
+
+        <div class="control-btn-row group">
+          <button class="btn-control-btn" type="button" aria-pressed="false">
+            <i class="svg-icon ico-distance"></i>
+            <div class="btn-tooltip">거리재기</div>
+          </button>
+          <button class="btn-control-btn" type="button" aria-pressed="false">
+            <i class="svg-icon ico-area"></i>
+            <div class="btn-tooltip">면적재기</div>
+          </button>
+          <button class="btn-control-btn no-active" type="button" aria-pressed="false"><i
+              class="svg-icon ico-refresh"></i>
+            <div class="btn-tooltip">새로고침</div>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- //지도 컨트롤 -->
+  </div>
+  <!-- //map-container -->
+
+  <script>
+    // AI 분석 모델 메뉴 토글
+    
+
+    //공통 팝업 레이어 스크립트
+    const popupLayer = document.getElementById('popupLayer');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    
+    function closePopup() {
+      popupLayer.classList.remove('show');
+      popupOverlay.classList.remove('show');
+    }
+    popupClose.addEventListener('click', closePopup);
+    popupOverlay.addEventListener('click', closePopup);
+
+    // 다중 옵션 패널 토글 (이벤트 위임)
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn-control-popup, .btn-control-btn');
+      if (!btn) return;
+
+      // 옵션 패널 버튼
+      if (btn.classList.contains('btn-control-popup') && btn.hasAttribute('data-option-target')) {
+        e.stopPropagation();
+        const targetId = btn.getAttribute('data-option-target');
+        const panel = document.getElementById(targetId);
+        if (!panel) return;
+
+        const isOpen = panel.classList.contains('show');
+
+        // 모든 옵션 패널 닫기 + 모든 btn-control-popup aria-pressed false
+        document.querySelectorAll('.option-panel').forEach(p => p.classList.remove('show'));
+        document.querySelectorAll('.btn-control-popup').forEach(b => b.setAttribute('aria-pressed', 'false'));
+
+        // 토글: 이미 열려 있으면 닫고, 아니면 연다
+        if (!isOpen) {
+          panel.classList.add('show');
+          btn.setAttribute('aria-pressed', 'true');
+        }
+        // 이미 열려 있으면 아무것도 안 함(닫힌 상태 유지)
+        return;
+      }
+
+      // 일반 토글 버튼
+      if (btn.classList.contains('btn-control-btn')) {
+        // no-active 클래스가 있으면 토글하지 않음
+        if (btn.classList.contains('no-active')) return;
+        const isPressed = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', isPressed ? 'false' : 'true');
+        return;
+      }
+    });
+    // 옵션 패널 내부 닫기 버튼
+    document.querySelectorAll('.option-close').forEach(closeBtn => {
+      closeBtn.addEventListener('click', function (e) {
+        const panel = closeBtn.closest('.option-panel');
+        panel.classList.remove('show');
+        const btn = document.querySelector(`[data-option-target="${panel.id}"]`);
+        if (btn) {
+          btn.setAttribute('aria-pressed', 'false');
+        }
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButtons = document.querySelectorAll('.toggle-list > li > button');
+
+      toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const listItem = this.parentElement;
+          const isExpanded = listItem.getAttribute('aria-expanded') === 'true';
+
+          // 현재 클릭된 아이템의 상태 토글
+          listItem.setAttribute('aria-expanded', !isExpanded);
+
+          // 다른 아이템들은 닫기
+          toggleButtons.forEach(otherButton => {
+            if (otherButton !== this) {
+              otherButton.parentElement.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      });
+    });
+
+    
+
+  </script>
+</body>
+
+</html>
